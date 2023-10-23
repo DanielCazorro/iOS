@@ -23,11 +23,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86P-x6-bTv">
+                                <rect key="frame" x="159" y="448" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I1v-nF-9TW" secondAttribute="trailing" id="ZpW-di-d54"/>
+                            <constraint firstItem="86P-x6-bTv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dgK-KU-5kN"/>
+                            <constraint firstItem="86P-x6-bTv" firstAttribute="top" secondItem="I1v-nF-9TW" secondAttribute="bottom" constant="12" id="fno-FV-h5P"/>
                             <constraint firstItem="I1v-nF-9TW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hg0-nR-pY3"/>
                             <constraint firstItem="I1v-nF-9TW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qPq-DY-hgc"/>
                         </constraints>
