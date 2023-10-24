@@ -8,7 +8,17 @@
 import UIKit
 
 protocol LoginViewControllerDelegate {
+    var viewState: ((LoginViewState) -> Void) { get set }
     func onLoginPressed(email: String?, password: String?)
+}
+
+
+// MARK: - ViewState -
+enum LoginViewState {
+    case loading(_ isLoading: Bool)
+    case showErrorEmail(_ error: String?)
+    case showErrorPassword(_ error: String?)
+    case navigateToNext
 }
 
 class LoginViewController: UIViewController {
@@ -42,6 +52,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initViews()
+        setObservers()
     }
     
     // MARK: - Private functions -
@@ -60,7 +71,28 @@ class LoginViewController: UIViewController {
     }
     
     @objc func dismissKeyboard() {
-        
+        view.endEditing(true)
+    }
+    
+    private func setObservers() {
+        viewModel?.viewState = { state in
+            switch state {
+            case .loading(let isLoading):
+                self.loadingView.isHidden = !isLoading
+                
+            case .showErrorEmail(let error):
+                self.emailFieldError.text = error
+                self.emailFieldError.isHidden = (error == nil || error?.isEmpty == true)
+                
+            case .showErrorPassword(let error):
+                self.passwordFieldError.text = error
+                self.passwordFieldError.isHidden = (error == nil || error?.isEmpty == true)
+                
+            case .navigateToNext:
+                self.loadingView.isHidden = true
+                // TODO: Navegar a la siguiente vista
+            }
+        }
     }
 }
 
