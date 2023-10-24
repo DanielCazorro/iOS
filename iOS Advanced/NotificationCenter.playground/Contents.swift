@@ -19,6 +19,7 @@ class Person {
                                                object: nil,
                                                queue: .main) { notification in
             print("Notification in forName:object:queue")
+        }
         
         NotificationCenter.default.addObserver(self, 
                                                selector: #selector(onNotificationTest),
@@ -27,8 +28,11 @@ class Person {
     
         }
         
+        deinit {
+            NotificationCenter.default.removeObserver(self)
+        }
+        
         @objc func onNotificationTest(_ notification: Notification) {
-            
+            print("Notification in onNotificationTest()")
         }
     }
-}
