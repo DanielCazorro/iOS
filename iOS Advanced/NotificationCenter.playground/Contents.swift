@@ -6,7 +6,12 @@ let notificationTest = Notification.Name("TEST_NOTIFICATION")
 class CashMachine {
     
     func money() {
-        NotificationCenter.default.post(name: notificationTest, object: nil)
+        NotificationCenter.default.post(name: notificationTest,
+                                        object: nil,
+                                        userInfo: [
+                                            "userId" : 1234,
+                                            "amount" : 2_000
+                                        ])
     }
 }
 
@@ -33,6 +38,13 @@ class Person {
         }
         
         @objc func onNotificationTest(_ notification: Notification) {
-            print("Notification in onNotificationTest()")
+            print("Notification in onNotificationTest(\(notification.name),userId: \(notification.userInfo["userId"] ?? "")")
         }
     }
+
+let person = Person()
+
+let cashMachine = CashMachine()
+
+cashMachine.money()
+
