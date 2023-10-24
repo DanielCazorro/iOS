@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate {
+    func onLoginPressed(email: String?, password: String?)
+}
+
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailField: UITextField!
@@ -16,15 +20,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loadingView: UIView!
     
     @IBAction func onLoginPressed() {
+        // TODO: Obtener el email y password introducidos por el usuario y enviarlos al servicio del API de Login
         
+        viewModel?.onLoginPressed(
+            email: emailField.text,
+            password: passwordField.text
+        )
     }
     
+    var viewModel: LoginViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
 }
-

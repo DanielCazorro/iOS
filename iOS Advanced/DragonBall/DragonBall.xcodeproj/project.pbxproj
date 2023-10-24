@@ -17,6 +17,7 @@
 		5DF806012AE8088E001CA7C9 /* DragonBallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF806002AE8088E001CA7C9 /* DragonBallTests.swift */; };
 		5DF8060B2AE8088E001CA7C9 /* DragonBallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF8060A2AE8088E001CA7C9 /* DragonBallUITests.swift */; };
 		5DF8060D2AE8088E001CA7C9 /* DragonBallUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF8060C2AE8088E001CA7C9 /* DragonBallUITestsLaunchTests.swift */; };
+		5DF806282AE8127F001CA7C9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF806272AE8127F001CA7C9 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5DF806062AE8088E001CA7C9 /* DragonBallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonBallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF8060A2AE8088E001CA7C9 /* DragonBallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallUITests.swift; sourceTree = "<group>"; };
 		5DF8060C2AE8088E001CA7C9 /* DragonBallUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5DF806272AE8127F001CA7C9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				5DF805EA2AE8088B001CA7C9 /* LoginViewController.swift */,
+				5DF806272AE8127F001CA7C9 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				5DF805EB2AE8088B001CA7C9 /* LoginViewController.swift in Sources */,
 				5DF805F12AE8088B001CA7C9 /* DragonBall.xcdatamodeld in Sources */,
 				5DF805E72AE8088B001CA7C9 /* AppDelegate.swift in Sources */,
+				5DF806282AE8127F001CA7C9 /* LoginViewModel.swift in Sources */,
 				5DF805E92AE8088B001CA7C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+class LoginViewModel {
+    
+    func onLoginPressed(email: String?, password: String?) {
+        
+    }
+}
