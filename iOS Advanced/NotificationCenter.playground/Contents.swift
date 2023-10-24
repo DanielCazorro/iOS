@@ -19,18 +19,20 @@ class CashMachine {
 class Person {
     
     init() {
-        
+        /*
         NotificationCenter.default.addObserver(forName: notificationTest,
                                                object: nil,
                                                queue: .main) { notification in
             print("Notification in forName:object:queue")
         }
+        */
         
-        NotificationCenter.default.addObserver(self, 
-                                               selector: #selector(onNotificationTest),
-                                               name: notificationTest,
-                                               object: nil)
-    
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(onNotificationTest),
+            name: notificationTest,
+            object: nil)
+        
         }
         
         deinit {
