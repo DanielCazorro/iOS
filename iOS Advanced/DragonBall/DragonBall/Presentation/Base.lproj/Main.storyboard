@@ -101,6 +101,7 @@
                     <connections>
                         <outlet property="emailField" destination="zmU-c8-2Dd" id="Xeu-O2-xL5"/>
                         <outlet property="emailFieldError" destination="A85-Fl-P0D" id="Zyh-hg-3bV"/>
+                        <outlet property="loadingView" destination="tNf-Rv-5Hn" id="mZJ-1d-td6"/>
                         <outlet property="passwordField" destination="IGm-Sb-1u3" id="Zfm-R5-AeW"/>
                         <outlet property="passwordFieldError" destination="ZyE-Sg-pZb" id="zfM-XO-y62"/>
                     </connections>
