@@ -14,6 +14,7 @@
 		5DA9957B2AE9A42A007061BE /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA9957A2AE9A42A007061BE /* HeroesViewController.swift */; };
 		5DA9957D2AE9A432007061BE /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA9957C2AE9A432007061BE /* HeroesViewModel.swift */; };
 		5DA995882AE9AA84007061BE /* HeroCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA995872AE9AA84007061BE /* HeroCellView.swift */; };
+		5DA9958E2AE9AC94007061BE /* HeroCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA9958D2AE9AC94007061BE /* HeroCellView.xib */; };
 		5DF805E72AE8088B001CA7C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF805E62AE8088B001CA7C9 /* AppDelegate.swift */; };
 		5DF805E92AE8088B001CA7C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF805E82AE8088B001CA7C9 /* SceneDelegate.swift */; };
 		5DF805EB2AE8088B001CA7C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF805EA2AE8088B001CA7C9 /* LoginViewController.swift */; };
@@ -51,6 +52,7 @@
 		5DA9957A2AE9A42A007061BE /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
 		5DA9957C2AE9A432007061BE /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
 		5DA995872AE9AA84007061BE /* HeroCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCellView.swift; sourceTree = "<group>"; };
+		5DA9958D2AE9AC94007061BE /* HeroCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCellView.xib; sourceTree = "<group>"; };
 		5DF805E32AE8088B001CA7C9 /* DragonBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF805E62AE8088B001CA7C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DF805E82AE8088B001CA7C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				5DA995872AE9AA84007061BE /* HeroCellView.swift */,
+				5DA9958D2AE9AC94007061BE /* HeroCellView.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DF805F62AE8088D001CA7C9 /* LaunchScreen.storyboard in Resources */,
+				5DA9958E2AE9AC94007061BE /* HeroCellView.xib in Resources */,
 				5DF805F32AE8088D001CA7C9 /* Assets.xcassets in Resources */,
 				5DA995792AE9A421007061BE /* Heroes.storyboard in Resources */,
 				5DF805EE2AE8088B001CA7C9 /* Login.storyboard in Resources */,
