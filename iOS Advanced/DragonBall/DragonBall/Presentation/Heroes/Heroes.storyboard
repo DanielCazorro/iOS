@@ -19,6 +19,61 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6K3-wN-yVZ">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="EPn-ZO-w0C">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EPn-ZO-w0C" id="6eo-Ik-2WE">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLg-np-NOl">
+                                                    <rect key="frame" x="36" y="19" width="321" height="162"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kwm-31-eTI">
+                                                            <rect key="frame" x="16" y="24" width="289" height="112"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f2U-Dx-CvO">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="131" height="112"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="f2U-Dx-CvO" secondAttribute="height" multiplier="131:112" id="jdu-YT-FA4"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBg-NG-zKH">
+                                                                    <rect key="frame" x="139" y="0.0" width="150" height="0.0"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZ3-0E-Qaa">
+                                                            <rect key="frame" x="16" y="8" width="297" height="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="kwm-31-eTI" firstAttribute="top" secondItem="sZ3-0E-Qaa" secondAttribute="bottom" constant="16" id="Mch-h0-naA"/>
+                                                        <constraint firstItem="kwm-31-eTI" firstAttribute="leading" secondItem="xLg-np-NOl" secondAttribute="leading" constant="16" id="X6A-3L-Mld"/>
+                                                        <constraint firstAttribute="trailing" secondItem="sZ3-0E-Qaa" secondAttribute="trailing" constant="8" id="b4J-AD-YxO"/>
+                                                        <constraint firstItem="sZ3-0E-Qaa" firstAttribute="top" secondItem="xLg-np-NOl" secondAttribute="top" constant="8" id="pZR-f2-LTt"/>
+                                                        <constraint firstAttribute="trailing" secondItem="kwm-31-eTI" secondAttribute="trailing" constant="16" id="pZj-xQ-Ssc"/>
+                                                        <constraint firstItem="sZ3-0E-Qaa" firstAttribute="leading" secondItem="xLg-np-NOl" secondAttribute="leading" constant="16" id="se5-io-Rsw"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xLg-np-NOl" firstAttribute="top" secondItem="6eo-Ik-2WE" secondAttribute="topMargin" constant="8" id="GmZ-9C-AVF"/>
+                                                <constraint firstItem="xLg-np-NOl" firstAttribute="leading" secondItem="6eo-Ik-2WE" secondAttribute="leadingMargin" constant="16" id="PNv-IM-mJh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xLg-np-NOl" secondAttribute="bottom" constant="8" id="m8T-I2-4fA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xLg-np-NOl" secondAttribute="trailing" constant="16" id="x1p-SG-Qdi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -36,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-34"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>
