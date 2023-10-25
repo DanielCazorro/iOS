@@ -56,6 +56,9 @@ class LoginViewModel: LoginViewControllerDelegate {
     }
     
     @objc func onLoginResponse(_ notification: Notification) {
+        defer {
+            viewState?(.loading(false))
+        }
         // TODO: Parsear resultado qeu vendrá en notification.userInfo
         guard let token = notification.userInfo?[NotificationCenter.tokenKey] as? String,
         !token.isEmpty else {
@@ -63,7 +66,6 @@ class LoginViewModel: LoginViewControllerDelegate {
         }
         
         secureDataProvider.save(token: token)
-        viewState?(.loading(false))
         viewState?(.navigateToNext)
     }
     
