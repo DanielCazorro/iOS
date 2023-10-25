@@ -95,11 +95,19 @@
 		5DA995772AE9A40A007061BE /* Heroes */ = {
 			isa = PBXGroup;
 			children = (
+				5DA995852AE9A63D007061BE /* Cell */,
 				5DA995782AE9A421007061BE /* Heroes.storyboard */,
 				5DA9957A2AE9A42A007061BE /* HeroesViewController.swift */,
 				5DA9957C2AE9A432007061BE /* HeroesViewModel.swift */,
 			);
 			path = Heroes;
+			sourceTree = "<group>";
+		};
+		5DA995852AE9A63D007061BE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		5DF805DA2AE8088B001CA7C9 = {
