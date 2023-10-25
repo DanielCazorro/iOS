@@ -12,19 +12,19 @@ class Database {
     private var moc: NSManagedObjectContext? {
         (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     }
-    
-    func createPerson() {
+
+    func createPersons() {
         guard let moc,
               let entityPerson = NSEntityDescription.entity(forEntityName: "Person", in: moc)
         else { return }
-        
+
         // MARK: - Person 1
         let person = NSManagedObject(entity: entityPerson,
                                      insertInto: moc)
         person.setValue("David", forKey: "name")
         person.setValue("Jardón", forKey: "lastname")
         person.setValue(38, forKey: "age")
-        
+
         // MARK: - Person 2
         let person2 = NSManagedObject(entity: entityPerson,
                                      insertInto: moc)
@@ -50,17 +50,17 @@ class Database {
 
         try? moc.save()
     }
-    
+
     func loadPersons() {
-        let fetchPerson = NSFetchRequest<NSManagedObject>(entityName: "Person")
+        let fetchPerson = NSFetchRequest<Person>(entityName: "Person")
         guard let moc,
-        let persons = try? moc.fetch(fetchPerson) else {
+              let persons = try? moc.fetch(fetchPerson) else {
             return
         }
-        
+
         print("Persons: \(persons)")
     }
-    
+
     func loadPersonsWithChildrens() {
         let numChildrens = 2
         let age = 38
@@ -74,7 +74,7 @@ class Database {
 
         print("Persons with childrens: \(persons)")
     }
-    
+
     func loadPersonsSortedByAge() {
         let fetchPersons = NSFetchRequest<Person>(entityName: "Person")
         fetchPersons.sortDescriptors = [
@@ -89,5 +89,27 @@ class Database {
         }
 
         print("Persons sorted by age: \(persons)")
+    }
+
+    func deleteAll() {
+        let fetchPersons = NSFetchRequest<Person>(entityName: "Person")
+        guard let moc,
+              let persons = try? moc.fetch(fetchPersons) else { return }
+
+        persons.forEach { moc.delete($0) }
+        try? moc.save()
+    }
+
+    func delete(by name: String) {
+        let fetchPersons = NSFetchRequest<Person>(entityName: "Person")
+        fetchPersons.predicate = NSPredicate(format: "name = %@", name)
+
+        guard let moc,
+              let persons = try? moc.fetch(fetchPersons) else {
+            return
+        }
+
+        persons.forEach { moc.delete($0) }
+        try? moc.save()
     }
 }

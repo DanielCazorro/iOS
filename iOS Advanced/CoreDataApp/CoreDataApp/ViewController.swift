@@ -14,11 +14,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let database = Database()
-        database.createPerson()
+        database.deleteAll()
+        database.createPersons()
         database.loadPersons()
         database.loadPersonsWithChildrens()
+        database.loadPersonsSortedByAge()
+        
+        database.delete(by: "David")
+        database.loadPersons()
+        
     }
-
-
 }
-
