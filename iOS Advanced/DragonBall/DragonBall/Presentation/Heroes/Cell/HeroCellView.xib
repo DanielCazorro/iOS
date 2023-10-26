@@ -61,10 +61,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="containerView" destination="AlL-Gq-6zl" id="qMa-T7-F1R"/>
-                <outlet property="heroeDescription" destination="gk7-iE-KXu" id="FNV-1H-mhn"/>
-                <outlet property="name" destination="oVa-Py-lFD" id="MSC-WC-qe6"/>
-                <outlet property="photo" destination="Cj9-l0-cms" id="Oce-vg-sio"/>
+                <outlet property="containerView" destination="AlL-Gq-6zl" id="WFe-mo-aSZ"/>
+                <outlet property="heroeDescription" destination="gk7-iE-KXu" id="HXp-4r-lmJ"/>
+                <outlet property="name" destination="oVa-Py-lFD" id="41O-oy-Zbz"/>
+                <outlet property="photo" destination="Cj9-l0-cms" id="ktR-S8-bro"/>
             </connections>
             <point key="canvasLocation" x="62" y="-11"/>
         </tableViewCell>

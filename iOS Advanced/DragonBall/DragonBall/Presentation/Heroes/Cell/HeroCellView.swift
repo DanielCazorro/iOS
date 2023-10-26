@@ -8,6 +8,8 @@
 import UIKit
 
 class HeroCellView: UITableViewCell {
+    static let identifier: String = "HeroCellView"
+    static let estimateHeight: CGFloat = 200
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var name: UILabel!
@@ -22,12 +24,26 @@ class HeroCellView: UITableViewCell {
         heroeDescription.text = nil
     }
     
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
+
+        containerView.layer.cornerRadius = 8
+        containerView.layer.shadowColor = UIColor.gray.cgColor
+        containerView.layer.shadowOffset = .zero
+        containerView.layer.shadowRadius = 8
+        containerView.layer.shadowOpacity = 0.6
         
+        selectionStyle = .none
     }
     
-    func updateView() {
+    func updateView(
+        name: String? = nil,
+        photo: String? = nil,
+        description: String? = nil
+    ) {
+        self.name.text = name
+        self.heroeDescription.text = description
         
+        //TODO: Descargar imagen y setearla en el ImageView de la photo
     }
 }
