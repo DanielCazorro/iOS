@@ -17,20 +17,25 @@ class LoginViewModel: LoginViewControllerDelegate {
     var heroesViewModel: HeroesViewControllerDelegate {
         HeroesViewModel(
             apiProvider: apiProvider,
-            secureDataProvider: secureDataProvider)
+            secureDataProvider: secureDataProvider
+        )
     }
     
+    
     // MARK: - Initializers -
-    init(apiProvider: ApiProviderProtocol,
-         securedataProvider: SecureDataProviderProtocol) {
+    init(
+        apiProvider: ApiProviderProtocol,
+        secureDataProvider: SecureDataProviderProtocol
+    ) {
         self.apiProvider = apiProvider
-        self.secureDataProvider = securedataProvider
+        self.secureDataProvider = secureDataProvider
         
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(onLoginResponse),
             name: NotificationCenter.apiLoginNotification,
-            object: nil)
+            object: nil
+        )
     }
     
     deinit {
@@ -44,29 +49,29 @@ class LoginViewModel: LoginViewControllerDelegate {
         DispatchQueue.global().async {
             guard self.isValid(email: email) else {
                 self.viewState?(.loading(false))
-                self.viewState?(.showErrorEmail("Indicque un email válido"))
+                self.viewState?(.showErrorEmail("Indique un email válido"))
                 return
             }
             
             guard self.isValid(password: password) else {
                 self.viewState?(.loading(false))
-                self.viewState?(.showErrorPassword("Indicque un password válido"))
+                self.viewState?(.showErrorPassword("Indique una password válida"))
                 return
             }
             
             self.doLoginWith(
                 email: email ?? "",
-                password: password ?? "")
+                password: password ?? ""
+            )
         }
     }
     
     @objc func onLoginResponse(_ notification: Notification) {
-        defer {
-            viewState?(.loading(false))
-        }
-        // TODO: Parsear resultado qeu vendrá en notification.userInfo
+        defer { viewState?(.loading(false)) }
+        
+        // Parsear resultado que vendrá en notification.userInfo
         guard let token = notification.userInfo?[NotificationCenter.tokenKey] as? String,
-        !token.isEmpty else {
+              !token.isEmpty else {
             return
         }
         
@@ -74,9 +79,9 @@ class LoginViewModel: LoginViewControllerDelegate {
         viewState?(.navigateToNext)
     }
     
-    private func isValid(email:String?) -> Bool {
-        email?.isEmpty == false && email?.contains("@") ?? false
-        
+    // MARK: - Private functions -
+    private func isValid(email: String?) -> Bool {
+        email?.isEmpty == false && (email?.contains("@") ?? false)
     }
     
     private func isValid(password: String?) -> Bool {
@@ -84,7 +89,7 @@ class LoginViewModel: LoginViewControllerDelegate {
     }
     
     private func doLoginWith(email: String, password: String) {
-        apiProvider.login(for: email, with: password)
+        apiProvider.login(for: email,
+                          with: password)
     }
 }
-

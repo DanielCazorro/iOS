@@ -62,7 +62,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="containerView" destination="AlL-Gq-6zl" id="WFe-mo-aSZ"/>
-                <outlet property="heroeDescription" destination="gk7-iE-KXu" id="HXp-4r-lmJ"/>
+                <outlet property="heroDescription" destination="gk7-iE-KXu" id="qa5-rv-CuL"/>
                 <outlet property="name" destination="oVa-Py-lFD" id="41O-oy-Zbz"/>
                 <outlet property="photo" destination="Cj9-l0-cms" id="ktR-S8-bro"/>
             </connections>

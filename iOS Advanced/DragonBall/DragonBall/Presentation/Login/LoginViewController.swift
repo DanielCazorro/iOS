@@ -7,14 +7,14 @@
 
 import UIKit
 
+// MARK: - View Protocol -
 protocol LoginViewControllerDelegate {
     var viewState: ((LoginViewState) -> Void)? { get set }
     var heroesViewModel: HeroesViewControllerDelegate { get }
     func onLoginPressed(email: String?, password: String?)
 }
 
-
-// MARK: - ViewState -
+// MARK: - View State -
 enum LoginViewState {
     case loading(_ isLoading: Bool)
     case showErrorEmail(_ error: String?)
@@ -23,18 +23,17 @@ enum LoginViewState {
 }
 
 class LoginViewController: UIViewController {
-    
-    // MARK: - IBOutlets -
+    // MARK: - IBOutlet -
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailFieldError: UILabel!
     @IBOutlet weak var passwordFieldError: UILabel!
     @IBOutlet weak var loadingView: UIView!
     
-    // MARK: - IBActions -
+    // MARK: - IBAction -
     @IBAction func onLoginPressed() {
-        // TODO: Obtener el email y password introducidos por el usuario y enviarlos al servicio del API de Login
-        
+        // Obtener el email y password introducidos por el usuario
+        // y enviarlos al servicio del API de Login
         viewModel?.onLoginPressed(
             email: emailField.text,
             password: passwordField.text
@@ -70,7 +69,7 @@ class LoginViewController: UIViewController {
         emailField.delegate = self
         emailField.tag = FieldType.email.rawValue
         passwordField.delegate = self
-        passwordField.tag = FieldType.email.rawValue
+        passwordField.tag = FieldType.password.rawValue
         
         view.addGestureRecognizer(
             UITapGestureRecognizer(
@@ -81,6 +80,7 @@ class LoginViewController: UIViewController {
     }
     
     @objc func dismissKeyboard() {
+        // Ocultar el teclado al pulsar en cualquier punto de la vista
         view.endEditing(true)
     }
     
@@ -100,8 +100,8 @@ class LoginViewController: UIViewController {
                     self?.passwordFieldError.isHidden = (error == nil || error?.isEmpty == true)
                     
                 case .navigateToNext:
-                    self?.loadingView.isHidden = true
-                    self?.performSegue(withIdentifier: "LOGIN_TO_HEROE", sender: nil)
+                    self?.performSegue(withIdentifier: "LOGIN_TO_HEROES",
+                                       sender: nil)
                 }
             }
         }
@@ -110,13 +110,6 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        /*
-         if emailField == textField {
-         emailFieldError.isHidden = true
-         } else if passwordField == textField {
-         passwordFieldError.isHidden = true
-         }
-         }*/
         switch FieldType(rawValue: textField.tag) {
         case .email:
             emailFieldError.isHidden = true
@@ -124,8 +117,7 @@ extension LoginViewController: UITextFieldDelegate {
         case .password:
             passwordFieldError.isHidden = true
             
-        default:
-            break
+        default: break
         }
     }
 }

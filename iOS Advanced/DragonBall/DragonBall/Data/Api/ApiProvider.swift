@@ -20,20 +20,23 @@ protocol ApiProviderProtocol {
 class ApiProvider: ApiProviderProtocol {
     // MARK: - Constants -
     static private let apiBaseURL = "https://dragonball.keepcoding.education/api"
-    
     private enum Endpoint {
         static let login = "/auth/login"
         static let heroes = "/heros/all"
+        static let heroLocations = "/heros/locations"
     }
+    
     
     // MARK: - ApiProviderProtocol -
     func login(for user: String, with password: String) {
         guard let url = URL(string: "\(ApiProvider.apiBaseURL)\(Endpoint.login)") else {
+            // TODO: Enviar notificación indicando el error
             return
         }
         
         guard let loginData = String(format: "%@:%@",
                                      user, password).data(using: .utf8)?.base64EncodedString() else {
+            // TODO: Enviar notificación indicando el error
             return
         }
         
@@ -55,19 +58,21 @@ class ApiProvider: ApiProviderProtocol {
             }
             
             guard let responseData = String(data: data, encoding: .utf8) else {
-                // TODO: enviar notificación indicando response vacío
+                // TODO: Enviar notificación indicando response vacío
                 return
             }
             
             NotificationCenter.default.post(
                 name: NotificationCenter.apiLoginNotification,
                 object: nil,
-                userInfo: [NotificationCenter.tokenKey: responseData])
-        } .resume()
+                userInfo: [NotificationCenter.tokenKey: responseData]
+            )
+        }.resume()
     }
     
     func getHeroes(by name: String?, token: String, completion: ((Heroes) -> Void)?) {
         guard let url = URL(string: "\(ApiProvider.apiBaseURL)\(Endpoint.heroes)") else {
+            // TODO: Enviar notificación indicando el error
             return
         }
         
@@ -76,8 +81,10 @@ class ApiProvider: ApiProviderProtocol {
         
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
-        urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        urlRequest.setValue("application/json; charset=utf-8",
+                            forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(token)",
+                            forHTTPHeaderField: "Authorization")
         urlRequest.httpBody = jsonParameters
         
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
@@ -95,13 +102,13 @@ class ApiProvider: ApiProviderProtocol {
             }
             
             guard let heroes = try? JSONDecoder().decode(Heroes.self, from: data) else {
+                // TODO: Enviar notificación indicando response error
                 completion?([])
                 return
             }
             
             print("API RESPONSE - GET HEROES: \(heroes)")
             completion?(heroes)
-
-        } .resume()
+        }.resume()
     }
 }

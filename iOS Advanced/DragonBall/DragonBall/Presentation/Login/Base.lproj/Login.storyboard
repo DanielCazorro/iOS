@@ -104,7 +104,7 @@
                         <outlet property="loadingView" destination="tNf-Rv-5Hn" id="mZJ-1d-td6"/>
                         <outlet property="passwordField" destination="IGm-Sb-1u3" id="Zfm-R5-AeW"/>
                         <outlet property="passwordFieldError" destination="ZyE-Sg-pZb" id="zfM-XO-y62"/>
-                        <segue destination="oG6-F4-Zof" kind="show" identifier="LOGIN_TO_HEROE" id="Rwq-e0-tXx"/>
+                        <segue destination="oG6-F4-Zof" kind="show" identifier="LOGIN_TO_HEROES" id="Rwq-e0-tXx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

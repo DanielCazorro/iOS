@@ -8,8 +8,7 @@
 import Foundation
 
 class HeroesViewModel: HeroesViewControllerDelegate {
-    
-    // MARK: - Dependencies-
+    // MARK: - Dependencies -
     private let apiProvider: ApiProviderProtocol
     private let secureDataProvider: SecureDataProviderProtocol
     
@@ -20,18 +19,20 @@ class HeroesViewModel: HeroesViewControllerDelegate {
     }
     private var heroes: Heroes = []
     
-    //MARK: - Initializers -
+    // MARK: - Initializers -
     init(apiProvider: ApiProviderProtocol,
          secureDataProvider: SecureDataProviderProtocol) {
         self.apiProvider = apiProvider
         self.secureDataProvider = secureDataProvider
     }
     
+    // MARK: - Public functions -
     func onViewAppear() {
         viewState?(.loading(true))
         DispatchQueue.global().async {
-            defer { self.viewState?(.loading(false))}
-            guard let token = self.secureDataProvider.getToken() else {return}
+            defer { self.viewState?(.loading(false)) }
+            guard let token = self.secureDataProvider.getToken() else { return }
+            
             self.apiProvider.getHeroes(by: nil,
                                        token: token) { heroes in
                 self.heroes = heroes
@@ -39,7 +40,6 @@ class HeroesViewModel: HeroesViewControllerDelegate {
             }
         }
     }
-    
     func heroBy(index: Int) -> Hero? {
         if index >= 0 && index < heroesCount {
             heroes[index]

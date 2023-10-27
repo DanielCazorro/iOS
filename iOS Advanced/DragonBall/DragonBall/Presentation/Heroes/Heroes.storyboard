@@ -19,18 +19,26 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6K3-wN-yVZ">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heroes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zTp-5n-JSJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </tableView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tO-KU-EjR">
+                            <view contentMode="scaleToFill" id="1GW-W3-Ati">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xfA-LH-hks">
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="row-M0-HCH">
                                         <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
                                     </activityIndicatorView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.74681122448979587" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.74954825680272108" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="xfA-LH-hks" firstAttribute="centerY" secondItem="1tO-KU-EjR" secondAttribute="centerY" id="Uy3-FL-f2h"/>
-                                    <constraint firstItem="xfA-LH-hks" firstAttribute="centerX" secondItem="1tO-KU-EjR" secondAttribute="centerX" id="jrD-Ei-DGS"/>
+                                    <constraint firstItem="row-M0-HCH" firstAttribute="centerY" secondItem="1GW-W3-Ati" secondAttribute="centerY" id="4JY-Y4-cSc"/>
+                                    <constraint firstItem="row-M0-HCH" firstAttribute="centerX" secondItem="1GW-W3-Ati" secondAttribute="centerX" id="dvz-RA-nuR"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -41,14 +49,10 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6K3-wN-yVZ" secondAttribute="bottom" id="Onx-jc-Y16"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6K3-wN-yVZ" secondAttribute="trailing" id="Szg-Cr-6hE"/>
                             <constraint firstItem="6K3-wN-yVZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="UjX-oh-NMR"/>
-                            <constraint firstItem="1tO-KU-EjR" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="VBO-ja-dgP"/>
-                            <constraint firstAttribute="bottom" secondItem="1tO-KU-EjR" secondAttribute="bottom" id="lAq-Ei-5np"/>
-                            <constraint firstItem="1tO-KU-EjR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="u59-Oh-TxU"/>
-                            <constraint firstItem="1tO-KU-EjR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vYC-N8-5uA"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loadingView" destination="1tO-KU-EjR" id="gWy-G0-ybZ"/>
+                        <outlet property="loadingView" destination="1GW-W3-Ati" id="Xp1-eB-MZf"/>
                         <outlet property="tableView" destination="6K3-wN-yVZ" id="sgL-Nz-mPr"/>
                     </connections>
                 </viewController>

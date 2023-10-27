@@ -6,33 +6,36 @@
 //
 
 import UIKit
-
+import Kingfisher
 
 class HeroCellView: UITableViewCell {
     static let identifier: String = "HeroCellView"
-    static let estimateHeight: CGFloat = 200
+    static let estimatedHeight: CGFloat = 256
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var photo: UIImageView!
-    @IBOutlet weak var heroeDescription: UILabel!
+    @IBOutlet weak var heroDescription: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
         name.text = nil
         photo.image = nil
-        heroeDescription.text = nil
+        heroDescription.text = nil
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
         containerView.layer.cornerRadius = 8
         containerView.layer.shadowColor = UIColor.gray.cgColor
         containerView.layer.shadowOffset = .zero
         containerView.layer.shadowRadius = 8
-        containerView.layer.shadowOpacity = 0.6
+        containerView.layer.shadowOpacity = 0.4
+        
+        photo.layer.cornerRadius = 8
+        photo.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
         
         selectionStyle = .none
     }
@@ -43,8 +46,7 @@ class HeroCellView: UITableViewCell {
         description: String? = nil
     ) {
         self.name.text = name
-        self.heroeDescription.text = description
-        
-        //TODO: Descargar imagen y setearla en el ImageView de la photo
+        self.heroDescription.text = description
+        self.photo.kf.setImage(with: URL(string: photo ?? ""))
     }
 }

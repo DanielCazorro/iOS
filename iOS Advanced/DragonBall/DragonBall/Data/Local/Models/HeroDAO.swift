@@ -17,6 +17,4 @@ class HeroDAO: NSManagedObject {
     @NSManaged var heroDescription: String?
     @NSManaged var photo: String?
     @NSManaged var favorite: Bool
-    
-    
 }
