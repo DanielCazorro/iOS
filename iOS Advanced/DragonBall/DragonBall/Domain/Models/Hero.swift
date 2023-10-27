@@ -22,7 +22,7 @@ struct Hero: Codable {
     let id: String?
     let name: String?
     let description: String?
-    let photo: URL?
+    let photo: String?
     let isFavorite: Bool?
     
 }
