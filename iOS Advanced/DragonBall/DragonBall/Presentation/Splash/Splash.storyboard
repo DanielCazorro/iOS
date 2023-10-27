@@ -19,17 +19,24 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo2" translatesAutoresizingMaskIntoConstraints="NO" id="ZS2-cL-9V2">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="yGx-i5-3cn">
+                                <rect key="frame" x="178" y="763" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="yGx-i5-3cn" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="7Qe-ZA-ARA"/>
                             <constraint firstItem="ZS2-cL-9V2" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="9pt-S2-kfy"/>
                             <constraint firstAttribute="bottom" secondItem="ZS2-cL-9V2" secondAttribute="bottom" id="Dpv-IT-ZBn"/>
                             <constraint firstItem="ZS2-cL-9V2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="O4F-3n-Zxn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="yGx-i5-3cn" secondAttribute="bottom" constant="18" id="S40-3Y-1Ab"/>
                             <constraint firstItem="ZS2-cL-9V2" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="tda-9e-Ako"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loading" destination="yGx-i5-3cn" id="0jy-V0-hvz"/>
                         <segue destination="kac-tu-gZk" kind="show" identifier="SPLASH_TO_LOGIN" id="UPW-Tp-Z9e"/>
                         <segue destination="fH0-Ov-08F" kind="show" identifier="SPLASH_TO_HEROES" id="j7o-vj-Tco"/>
                     </connections>
