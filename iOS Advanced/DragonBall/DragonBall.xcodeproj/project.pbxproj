@@ -17,6 +17,9 @@
 		5DA9958E2AE9AC94007061BE /* HeroCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA9958D2AE9AC94007061BE /* HeroCellView.xib */; };
 		5DB959532AEBBFB10080A4B5 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB959522AEBBFB10080A4B5 /* Hero.swift */; };
 		5DB9595D2AEBF2660080A4B5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB9595C2AEBF2660080A4B5 /* Kingfisher */; };
+		5DB959612AEC152E0080A4B5 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB959602AEC152E0080A4B5 /* Splash.storyboard */; };
+		5DB959632AEC15370080A4B5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB959622AEC15370080A4B5 /* SplashViewController.swift */; };
+		5DB959652AEC153F0080A4B5 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB959642AEC153F0080A4B5 /* SplashViewModel.swift */; };
 		5DF46B862AEA59F400E3F4A4 /* HeroDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF46B852AEA59F400E3F4A4 /* HeroDAO.swift */; };
 		5DF46B8B2AEA5B7700E3F4A4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF46B8A2AEA5B7700E3F4A4 /* CoreDataStack.swift */; };
 		5DF805E72AE8088B001CA7C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF805E62AE8088B001CA7C9 /* AppDelegate.swift */; };
@@ -58,6 +61,9 @@
 		5DA995872AE9AA84007061BE /* HeroCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCellView.swift; sourceTree = "<group>"; };
 		5DA9958D2AE9AC94007061BE /* HeroCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCellView.xib; sourceTree = "<group>"; };
 		5DB959522AEBBFB10080A4B5 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		5DB959602AEC152E0080A4B5 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		5DB959622AEC15370080A4B5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		5DB959642AEC153F0080A4B5 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		5DF46B852AEA59F400E3F4A4 /* HeroDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDAO.swift; sourceTree = "<group>"; };
 		5DF46B8A2AEA5B7700E3F4A4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		5DF805E32AE8088B001CA7C9 /* DragonBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +146,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5DB9595E2AEC150D0080A4B5 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				5DB959602AEC152E0080A4B5 /* Splash.storyboard */,
+				5DB959622AEC15370080A4B5 /* SplashViewController.swift */,
+				5DB959642AEC153F0080A4B5 /* SplashViewModel.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		5DF46B842AEA59EA00E3F4A4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				5DF806232AE80953001CA7C9 /* Launch */,
+				5DB9595E2AEC150D0080A4B5 /* Splash */,
 				5DF806252AE80992001CA7C9 /* Login */,
 				5DA995772AE9A40A007061BE /* Heroes */,
 			);
@@ -380,6 +397,7 @@
 				5DF805F32AE8088D001CA7C9 /* Assets.xcassets in Resources */,
 				5DA995792AE9A421007061BE /* Heroes.storyboard in Resources */,
 				5DF805EE2AE8088B001CA7C9 /* Login.storyboard in Resources */,
+				5DB959612AEC152E0080A4B5 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,11 +422,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB959652AEC153F0080A4B5 /* SplashViewModel.swift in Sources */,
 				5DF805EB2AE8088B001CA7C9 /* LoginViewController.swift in Sources */,
 				5DF805F12AE8088B001CA7C9 /* DragonBall.xcdatamodeld in Sources */,
 				5DA9957B2AE9A42A007061BE /* HeroesViewController.swift in Sources */,
 				5DF46B8B2AEA5B7700E3F4A4 /* CoreDataStack.swift in Sources */,
 				5DF805E72AE8088B001CA7C9 /* AppDelegate.swift in Sources */,
+				5DB959632AEC15370080A4B5 /* SplashViewController.swift in Sources */,
 				5DA9957D2AE9A432007061BE /* HeroesViewModel.swift in Sources */,
 				5DF46B862AEA59F400E3F4A4 /* HeroDAO.swift in Sources */,
 				5DF806282AE8127F001CA7C9 /* LoginViewModel.swift in Sources */,
