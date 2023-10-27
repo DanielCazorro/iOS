@@ -15,6 +15,7 @@
 		5DA9957D2AE9A432007061BE /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA9957C2AE9A432007061BE /* HeroesViewModel.swift */; };
 		5DA995882AE9AA84007061BE /* HeroCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA995872AE9AA84007061BE /* HeroCellView.swift */; };
 		5DA9958E2AE9AC94007061BE /* HeroCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA9958D2AE9AC94007061BE /* HeroCellView.xib */; };
+		5DB959532AEBBFB10080A4B5 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB959522AEBBFB10080A4B5 /* Hero.swift */; };
 		5DF46B862AEA59F400E3F4A4 /* HeroDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF46B852AEA59F400E3F4A4 /* HeroDAO.swift */; };
 		5DF46B8B2AEA5B7700E3F4A4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF46B8A2AEA5B7700E3F4A4 /* CoreDataStack.swift */; };
 		5DF805E72AE8088B001CA7C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF805E62AE8088B001CA7C9 /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 		5DA9957C2AE9A432007061BE /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
 		5DA995872AE9AA84007061BE /* HeroCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCellView.swift; sourceTree = "<group>"; };
 		5DA9958D2AE9AC94007061BE /* HeroCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCellView.xib; sourceTree = "<group>"; };
+		5DB959522AEBBFB10080A4B5 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		5DF46B852AEA59F400E3F4A4 /* HeroDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDAO.swift; sourceTree = "<group>"; };
 		5DF46B8A2AEA5B7700E3F4A4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		5DF805E32AE8088B001CA7C9 /* DragonBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,22 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		5DB959502AEBBF910080A4B5 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5DB959512AEBBFA10080A4B5 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5DB959512AEBBFA10080A4B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5DB959522AEBBFB10080A4B5 /* Hero.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5DF46B842AEA59EA00E3F4A4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +174,7 @@
 				5DF805F72AE8088D001CA7C9 /* Info.plist */,
 				5DF8061B2AE808CA001CA7C9 /* Resources */,
 				5DF8061C2AE808CF001CA7C9 /* Data */,
+				5DB959502AEBBF910080A4B5 /* Domain */,
 				5DF806192AE808BA001CA7C9 /* Presentation */,
 			);
 			path = DragonBall;
@@ -392,6 +411,7 @@
 				5DA995882AE9AA84007061BE /* HeroCellView.swift in Sources */,
 				5D713EAF2AE8FD2700B9E9B8 /* SecureDataProvider.swift in Sources */,
 				5D713EB32AE8FEB500B9E9B8 /* ApiProvider.swift in Sources */,
+				5DB959532AEBBFB10080A4B5 /* Hero.swift in Sources */,
 				5DF805E92AE8088B001CA7C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
