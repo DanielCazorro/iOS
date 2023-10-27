@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class HeroCellView: UITableViewCell {
     static let identifier: String = "HeroCellView"
     static let estimateHeight: CGFloat = 200
