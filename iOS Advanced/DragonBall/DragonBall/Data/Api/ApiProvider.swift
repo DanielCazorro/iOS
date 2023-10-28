@@ -15,6 +15,7 @@ extension NotificationCenter {
 protocol ApiProviderProtocol {
     func login(for user: String, with password: String)
     func getHeroes(by name: String?, token: String, completion: ((Heroes) -> Void)?)
+    func getLocations(by heroId: String?, token: String, completion: ((HeroLocations) -> Void)?)
 }
 
 class ApiProvider: ApiProviderProtocol {
@@ -110,15 +111,15 @@ class ApiProvider: ApiProviderProtocol {
             print("API RESPONSE - GET HEROES: \(heroes)")
             completion?(heroes)
         }.resume()
-
+    }
     
-    func getHeroes(by name: String?, token: String, completion: ((Heroes) -> Void)?) {
-        guard let url = URL(string: "\(ApiProvider.apiBaseURL)\(Endpoint.heroes)") else {
+    func getLocations(by heroId: String?, token: String, completion: ((HeroLocations) -> Void)?) {
+        guard let url = URL(string: "\(ApiProvider.apiBaseURL)\(Endpoint.heroLocations)") else {
             // TODO: Enviar notificación indicando el error
             return
         }
         
-        let jsonData: [String: Any] = ["name": name ?? ""]
+        let jsonData: [String: Any] = ["id": heroId ?? ""]
         let jsonParameters = try? JSONSerialization.data(withJSONObject: jsonData)
         
         var urlRequest = URLRequest(url: url)
@@ -143,14 +144,14 @@ class ApiProvider: ApiProviderProtocol {
                 return
             }
             
-            guard let heroes = try? JSONDecoder().decode(Heroes.self, from: data) else {
+            guard let heroLocations = try? JSONDecoder().decode(HeroLocations.self, from: data) else {
                 // TODO: Enviar notificación indicando response error
                 completion?([])
                 return
             }
             
-            print("API RESPONSE - GET HEROES: \(heroes)")
-            completion?(heroes)
+            print("API RESPONSE - GET HERO LOCATIONS: \(heroLocations)")
+            completion?(heroLocations)
         }.resume()
     }
 }
