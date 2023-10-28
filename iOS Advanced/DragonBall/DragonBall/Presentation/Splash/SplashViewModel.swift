@@ -41,5 +41,4 @@ class SplashViewModel: SplashViewControllerDelegate {
             self.isLogged ? self.viewState?(.navigateToHeroes) : self.viewState?(.navigateToLogin)
         }
     }
-    
 }

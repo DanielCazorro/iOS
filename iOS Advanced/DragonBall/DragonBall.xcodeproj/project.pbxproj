@@ -20,6 +20,9 @@
 		5DB959612AEC152E0080A4B5 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB959602AEC152E0080A4B5 /* Splash.storyboard */; };
 		5DB959632AEC15370080A4B5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB959622AEC15370080A4B5 /* SplashViewController.swift */; };
 		5DB959652AEC153F0080A4B5 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB959642AEC153F0080A4B5 /* SplashViewModel.swift */; };
+		5DDF9E622AECF2FF008D1F5A /* HeroDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DDF9E612AECF2FF008D1F5A /* HeroDetail.storyboard */; };
+		5DDF9E642AECF316008D1F5A /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF9E632AECF316008D1F5A /* HeroDetailViewController.swift */; };
+		5DDF9E6B2AECF383008D1F5A /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF9E6A2AECF383008D1F5A /* HeroDetailViewModel.swift */; };
 		5DF46B862AEA59F400E3F4A4 /* HeroDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF46B852AEA59F400E3F4A4 /* HeroDAO.swift */; };
 		5DF46B8B2AEA5B7700E3F4A4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF46B8A2AEA5B7700E3F4A4 /* CoreDataStack.swift */; };
 		5DF805E72AE8088B001CA7C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF805E62AE8088B001CA7C9 /* AppDelegate.swift */; };
@@ -64,6 +67,9 @@
 		5DB959602AEC152E0080A4B5 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		5DB959622AEC15370080A4B5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		5DB959642AEC153F0080A4B5 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		5DDF9E612AECF2FF008D1F5A /* HeroDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroDetail.storyboard; sourceTree = "<group>"; };
+		5DDF9E632AECF316008D1F5A /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
+		5DDF9E6A2AECF383008D1F5A /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
 		5DF46B852AEA59F400E3F4A4 /* HeroDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDAO.swift; sourceTree = "<group>"; };
 		5DF46B8A2AEA5B7700E3F4A4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		5DF805E32AE8088B001CA7C9 /* DragonBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +162,16 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		5DDF9E602AECF2EF008D1F5A /* HeroDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5DDF9E612AECF2FF008D1F5A /* HeroDetail.storyboard */,
+				5DDF9E632AECF316008D1F5A /* HeroDetailViewController.swift */,
+				5DDF9E6A2AECF383008D1F5A /* HeroDetailViewModel.swift */,
+			);
+			path = HeroDetail;
+			sourceTree = "<group>";
+		};
 		5DF46B842AEA59EA00E3F4A4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +238,7 @@
 				5DB9595E2AEC150D0080A4B5 /* Splash */,
 				5DF806252AE80992001CA7C9 /* Login */,
 				5DA995772AE9A40A007061BE /* Heroes */,
+				5DDF9E602AECF2EF008D1F5A /* HeroDetail */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -395,6 +412,7 @@
 				5DF805F62AE8088D001CA7C9 /* LaunchScreen.storyboard in Resources */,
 				5DA9958E2AE9AC94007061BE /* HeroCellView.xib in Resources */,
 				5DF805F32AE8088D001CA7C9 /* Assets.xcassets in Resources */,
+				5DDF9E622AECF2FF008D1F5A /* HeroDetail.storyboard in Resources */,
 				5DA995792AE9A421007061BE /* Heroes.storyboard in Resources */,
 				5DF805EE2AE8088B001CA7C9 /* Login.storyboard in Resources */,
 				5DB959612AEC152E0080A4B5 /* Splash.storyboard in Resources */,
@@ -431,12 +449,14 @@
 				5DB959632AEC15370080A4B5 /* SplashViewController.swift in Sources */,
 				5DA9957D2AE9A432007061BE /* HeroesViewModel.swift in Sources */,
 				5DF46B862AEA59F400E3F4A4 /* HeroDAO.swift in Sources */,
+				5DDF9E642AECF316008D1F5A /* HeroDetailViewController.swift in Sources */,
 				5DF806282AE8127F001CA7C9 /* LoginViewModel.swift in Sources */,
 				5DA995882AE9AA84007061BE /* HeroCellView.swift in Sources */,
 				5D713EAF2AE8FD2700B9E9B8 /* SecureDataProvider.swift in Sources */,
 				5D713EB32AE8FEB500B9E9B8 /* ApiProvider.swift in Sources */,
 				5DB959532AEBBFB10080A4B5 /* Hero.swift in Sources */,
 				5DF805E92AE8088B001CA7C9 /* SceneDelegate.swift in Sources */,
+				5DDF9E6B2AECF383008D1F5A /* HeroDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
