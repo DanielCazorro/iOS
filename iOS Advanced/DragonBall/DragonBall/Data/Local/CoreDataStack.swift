@@ -8,9 +8,6 @@
 import Foundation
 import CoreData
 
-import Foundation
-import CoreData
-
 
 class CoreDataStack: NSObject {
     // Singleton
