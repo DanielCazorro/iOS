@@ -23,6 +23,7 @@
 		5DDF9E622AECF2FF008D1F5A /* HeroDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DDF9E612AECF2FF008D1F5A /* HeroDetail.storyboard */; };
 		5DDF9E642AECF316008D1F5A /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF9E632AECF316008D1F5A /* HeroDetailViewController.swift */; };
 		5DDF9E6B2AECF383008D1F5A /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF9E6A2AECF383008D1F5A /* HeroDetailViewModel.swift */; };
+		5DDF9E6F2AECF7F5008D1F5A /* HeroLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF9E6E2AECF7F5008D1F5A /* HeroLocation.swift */; };
 		5DF46B862AEA59F400E3F4A4 /* HeroDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF46B852AEA59F400E3F4A4 /* HeroDAO.swift */; };
 		5DF46B8B2AEA5B7700E3F4A4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF46B8A2AEA5B7700E3F4A4 /* CoreDataStack.swift */; };
 		5DF805E72AE8088B001CA7C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF805E62AE8088B001CA7C9 /* AppDelegate.swift */; };
@@ -70,6 +71,7 @@
 		5DDF9E612AECF2FF008D1F5A /* HeroDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroDetail.storyboard; sourceTree = "<group>"; };
 		5DDF9E632AECF316008D1F5A /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 		5DDF9E6A2AECF383008D1F5A /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
+		5DDF9E6E2AECF7F5008D1F5A /* HeroLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLocation.swift; sourceTree = "<group>"; };
 		5DF46B852AEA59F400E3F4A4 /* HeroDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDAO.swift; sourceTree = "<group>"; };
 		5DF46B8A2AEA5B7700E3F4A4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		5DF805E32AE8088B001CA7C9 /* DragonBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				5DB959522AEBBFB10080A4B5 /* Hero.swift */,
+				5DDF9E6E2AECF7F5008D1F5A /* HeroLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				5D713EB32AE8FEB500B9E9B8 /* ApiProvider.swift in Sources */,
 				5DB959532AEBBFB10080A4B5 /* Hero.swift in Sources */,
 				5DF805E92AE8088B001CA7C9 /* SceneDelegate.swift in Sources */,
+				5DDF9E6F2AECF7F5008D1F5A /* HeroLocation.swift in Sources */,
 				5DDF9E6B2AECF383008D1F5A /* HeroDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

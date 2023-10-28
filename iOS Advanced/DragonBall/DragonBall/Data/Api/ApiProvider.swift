@@ -110,5 +110,47 @@ class ApiProvider: ApiProviderProtocol {
             print("API RESPONSE - GET HEROES: \(heroes)")
             completion?(heroes)
         }.resume()
+
+    
+    func getHeroes(by name: String?, token: String, completion: ((Heroes) -> Void)?) {
+        guard let url = URL(string: "\(ApiProvider.apiBaseURL)\(Endpoint.heroes)") else {
+            // TODO: Enviar notificación indicando el error
+            return
+        }
+        
+        let jsonData: [String: Any] = ["name": name ?? ""]
+        let jsonParameters = try? JSONSerialization.data(withJSONObject: jsonData)
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.setValue("application/json; charset=utf-8",
+                            forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(token)",
+                            forHTTPHeaderField: "Authorization")
+        urlRequest.httpBody = jsonParameters
+        
+        URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+            guard error == nil else {
+                // TODO: Enviar notificación indicando el error
+                completion?([])
+                return
+            }
+            
+            guard let data,
+                  (response as? HTTPURLResponse)?.statusCode == 200 else {
+                // TODO: Enviar notificación indicando response error
+                completion?([])
+                return
+            }
+            
+            guard let heroes = try? JSONDecoder().decode(Heroes.self, from: data) else {
+                // TODO: Enviar notificación indicando response error
+                completion?([])
+                return
+            }
+            
+            print("API RESPONSE - GET HEROES: \(heroes)")
+            completion?(heroes)
+        }.resume()
     }
 }
