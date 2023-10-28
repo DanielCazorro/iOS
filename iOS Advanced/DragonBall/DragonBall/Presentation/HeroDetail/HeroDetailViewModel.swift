@@ -7,6 +7,22 @@
 
 import UIKit
 
-class HeroDetailViewModel {
+class HeroDetailViewModel: HeroDetailViewControllerDelegate {
+    private let apiProvider: ApiProviderProtocol
+    
+    var viewState: ((HeroDetailViewState) -> Void)?
+    
+    init(apiProvider: ApiProviderProtocol) {
+        self.apiProvider = apiProvider
+    }
+    
+    func onViewAppear() {
+        viewState?(.loading(true))
+                   
+        DispatchQueue.global().async {
+            
+        }
+    }
+    
     
 }
