@@ -43,4 +43,33 @@ subject.send(completion: .finished)
 subject.send(33)
 
 
+print("-----------------------------------")
+print("Ejercicio 1 - Subject sin valor actual")
+print("-----------------------------------")
+
+// MARK - Subject sin valor actual
+
+enum myError: Error {
+    case errorRed
+    case errorMaximo
+}
+
+let publisher2 = PassthroughSubject<Int, Never>()
+
+let suscriber2 = publisher2.sink{ data in
+    print("Ejercicio 2-1 recibo valor: \(data)")
+}
+
+let suscriber3 = publisher2.sink{
+    print("Ejercicio 2-2 recibo valor: \($0)")
+}
+
+publisher2.send(1)
+publisher2.send(2)
+publisher2.send(3)
+
+
+
+
+
 //: [Next](@next)
