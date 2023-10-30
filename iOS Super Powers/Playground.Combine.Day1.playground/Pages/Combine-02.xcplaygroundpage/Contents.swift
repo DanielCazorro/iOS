@@ -46,9 +46,40 @@ publisher2.sink { data in
 
 
 print("------------------------------------------")
-print("Ejercicio 3. Guardamos el suscritpor Store")
+print("Ejercicio 3. ¿Cómo lo hacemos en un ViewModel?")
 print("------------------------------------------")
 
+class viewModel {
+    var valor: String = "" {
+        didSet {
+            print("Ejercicio 3 - Valor asignado: \(valor)")
+        }
+    }
+    
+    // Definir un publicador
+    var publisher = ["Hola", "Keepcoders"].publisher
+    
+    // Set de suscriptores
+    var suscribers = Set<AnyCancellable>()
+    
+    init(){
+        /*
+         // El suscriptor recibe el valor del publicador
+         publisher.sink { data in
+         self.valor = data // Asigno el valor
+         }
+         .store(in: &suscribers)
+         */
+        
+        publisher
+            .assign(to: \.valor, on: self) // Mi clase la propiedad valor
+            .store(in: &suscribers)
+    }
+}
+
+// Lanzo
+
+let vm = viewModel()
 
 
 //: [Next](@next)
