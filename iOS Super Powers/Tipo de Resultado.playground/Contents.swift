@@ -118,3 +118,34 @@ case .error(let message) : print("Error: \(message)")
 // Se puede crear tu propia enumeración de resultados de una operación.
 // La función usa dicha enumeración en el tipo de devolución como dentro en los return
 // Al llamar a la función podemos hacer un switchpara los diferentes valores de la enumaracion (errory Success)
+
+
+// MARK: Result type Apple
+
+enum ErrorSumApple: Error {
+    case arrayEmpty, invalidData
+}
+
+func SumNumsApple(nums: [Int]) -> Result<Int, ErrorSumApple> {
+    if nums.isEmpty {
+        return .failure(.arrayEmpty)
+    }
+    
+    if !(nums.allSatisfy { $0 >= 0 }) {
+        return .failure(.invalidData)
+    }
+    
+    return .success(nums.reduce(0, +))
+}
+
+let sumApple = SumNumsApple(nums: [1,2,3,4,5])
+
+switch sumApple {
+case .success(let num) : print("Result ok: \(num)")
+case .failure(let message) : print("Error \(message)")
+}
+
+// Las enumeraciones de carga es lo que ha utilizado Apple para crear el resultType.
+// Se ha creado el tipo “Result” que se le indica el tipo del Success y el tipo de Error
+// Es una promesa de los futuros casos que la petición asíncrona podrá tener (success y error)
+// El sistema garantiza uno de ambos resultados y por ello hay que gestionar ambos
