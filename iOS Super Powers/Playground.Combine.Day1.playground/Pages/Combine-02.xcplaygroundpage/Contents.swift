@@ -25,11 +25,28 @@ suscriptor1 = publisher2.sink { data in
     print("Ejercicio1: recibo \(data)")
 }
 
-suscriptor1.cancel() // Cancelo suscriptor
+// suscriptor1.cancel() // Cancelo suscriptor
 
 
 print("------------------------------------------")
 print("Ejercicio 2. Guardamos el suscritpor Store")
+print("------------------------------------------")
+
+var suscriptor3 = Set<AnyCancellable>()
+
+publisher2.sink { data in
+    print("Ejercicio 2-1: recibo \(data)")
+}
+.store(in: &suscriptor3)
+
+publisher2.sink { data in
+    print("Ejercicio 2-2: recibo \(data)")
+}
+.store(in: &suscriptor3)
+
+
+print("------------------------------------------")
+print("Ejercicio 3. Guardamos el suscritpor Store")
 print("------------------------------------------")
 
 
