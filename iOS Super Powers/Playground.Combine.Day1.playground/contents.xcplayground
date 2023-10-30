@@ -3,5 +3,6 @@
     <pages>
         <page name='KVO'/>
         <page name='Combine-01'/>
+        <page name='Combine-02'/>
     </pages>
 </playground>
