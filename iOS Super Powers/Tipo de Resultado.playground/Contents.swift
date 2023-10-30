@@ -68,3 +68,53 @@ do {
 } catch {
     print("\(error)")
 }
+
+// Creamos una enumeración de Error
+// La función implementa “throws”
+// Cuando hay errores se lanza el throw correspondiente
+// Capturamos los errores en el do/catch en la llamada a la función.
+
+// MARK: Enumeraciones de carga
+
+enum Result<Int, String> {
+    case ok(Int)
+    case error(String)
+}
+
+func SumNumbers2(nums: [Int]) -> Result<Int, String> {
+    if nums.isEmpty {
+        return .error("Array empty")
+    }
+    
+    if !(nums.allSatisfy { $0 >= 0 }) {
+        return .error("Not Valid Data")
+    }
+    
+    return .ok(nums.reduce(0, +))
+}
+
+let result = SumNumbers2(nums: [1,2,3,4,5,6])
+
+switch result {
+case .ok(let num) : print("Result ok: \(num)")
+case .error(let message) : print("Error: \(message)")
+}
+
+let result2 = SumNumbers2(nums: [])
+
+switch result2 {
+case .ok(let num) : print("Result ok: \(num)")
+case .error(let message) : print("Error: \(message)")
+}
+
+let result3 = SumNumbers2(nums: [1,2,-5,4,5,6])
+
+switch result3 {
+case .ok(let num) : print("Result ok: \(num)")
+case .error(let message) : print("Error: \(message)")
+}
+
+// Desde Swift 5 hay otra forma de gestionar los errores que es con el tipo de resultado y las enumeraciones de carga.
+// Se puede crear tu propia enumeración de resultados de una operación.
+// La función usa dicha enumeración en el tipo de devolución como dentro en los return
+// Al llamar a la función podemos hacer un switchpara los diferentes valores de la enumaracion (errory Success)
