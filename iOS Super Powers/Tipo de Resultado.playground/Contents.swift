@@ -27,9 +27,44 @@ func SumNumber(nums: [Int]) -> Int? {
     return nums.reduce(0, +)
 }
 
-print("SumNumber: (nums: array1)")
 SumNumber(nums: array1)
-print("SumNumber: (nums: array2")
 SumNumber(nums: array2)
-print("SumNumber: (nums: [])")
 SumNumber(nums: [])
+
+// En caso de error nos devuelve nil pero no sabemos que es lo que ha pasado
+
+print("----------------------\n----------------------")
+
+// MARK: Control de errores do/catch
+
+enum ErrorSumDoCatch:Error {
+    case arrayEmpty2, invalidData
+}
+
+let array3 = [5,5,5,5,4,1,2,3]
+let array4 = [-5,6,7,7,-4,3,2,5]
+
+func SumNumberDoCatch(nums: [Int]) throws -> Int {
+    if nums.isEmpty {
+        throw ErrorSumDoCatch.arrayEmpty2
+    }
+    
+    if !(nums.allSatisfy { $0 >= 0 }) {
+        throw ErrorSumDoCatch.invalidData
+    }
+    
+    return nums.reduce(0,+)
+}
+
+do {
+    let sum4 = try SumNumberDoCatch(nums: array3)
+    let sum5 = try SumNumberDoCatch(nums: array4)
+    let sum6 = try SumNumberDoCatch(nums: [])
+    
+} catch ErrorSumDoCatch.arrayEmpty2 {
+    print("Array Empty")
+} catch ErrorSumDoCatch.invalidData {
+    print("Array Data Invalid")
+} catch {
+    print("\(error)")
+}
