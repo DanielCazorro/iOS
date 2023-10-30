@@ -4,6 +4,7 @@
         <page name='KVO'/>
         <page name='Combine-01'/>
         <page name='Combine-02'/>
+        <page name='Combine-04'/>
         <page name='Combine-03'/>
     </pages>
 </playground>
