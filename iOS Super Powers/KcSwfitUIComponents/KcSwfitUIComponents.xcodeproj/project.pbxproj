@@ -27,6 +27,7 @@
 		5DD56FE72AF1A0AF00CA5D73 /* DetailModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FE62AF1A0AE00CA5D73 /* DetailModalView.swift */; };
 		5DD56FE92AF1A34D00CA5D73 /* FormularioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FE82AF1A34D00CA5D73 /* FormularioView.swift */; };
 		5DD56FEB2AF1A70B00CA5D73 /* ScrollContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FEA2AF1A70B00CA5D73 /* ScrollContentView.swift */; };
+		5DD56FEE2AF1A94600CA5D73 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FED2AF1A94600CA5D73 /* ChartsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		5DD56FE62AF1A0AE00CA5D73 /* DetailModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModalView.swift; sourceTree = "<group>"; };
 		5DD56FE82AF1A34D00CA5D73 /* FormularioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioView.swift; sourceTree = "<group>"; };
 		5DD56FEA2AF1A70B00CA5D73 /* ScrollContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollContentView.swift; sourceTree = "<group>"; };
+		5DD56FED2AF1A94600CA5D73 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		5DD56FBD2AF17E4000CA5D73 /* KcSwfitUIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				5DD56FEC2AF1A92700CA5D73 /* iOS16 */,
 				5DD56FBE2AF17E4000CA5D73 /* KcSwfitUIComponentsApp.swift */,
 				5DD56FC02AF17E4000CA5D73 /* ContentView.swift */,
 				5DD56FC22AF17E4200CA5D73 /* Assets.xcassets */,
@@ -113,6 +116,14 @@
 				5DD56FC52AF17E4200CA5D73 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5DD56FEC2AF1A92700CA5D73 /* iOS16 */ = {
+			isa = PBXGroup;
+			children = (
+				5DD56FED2AF1A94600CA5D73 /* ChartsView.swift */,
+			);
+			path = iOS16;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 				5DD56FDD2AF1993100CA5D73 /* Listas3SwipeView.swift in Sources */,
 				5DD56FD72AF18B4100CA5D73 /* ButtonView.swift in Sources */,
 				5DD56FC12AF17E4000CA5D73 /* ContentView.swift in Sources */,
+				5DD56FEE2AF1A94600CA5D73 /* ChartsView.swift in Sources */,
 				5DD56FD52AF18A0400CA5D73 /* ZstackView.swift in Sources */,
 				5DD56FCD2AF1812A00CA5D73 /* vstackView.swift in Sources */,
 				5DD56FEB2AF1A70B00CA5D73 /* ScrollContentView.swift in Sources */,
