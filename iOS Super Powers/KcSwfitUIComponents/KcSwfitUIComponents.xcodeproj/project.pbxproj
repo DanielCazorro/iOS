@@ -12,6 +12,9 @@
 		5DD56FC32AF17E4200CA5D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DD56FC22AF17E4200CA5D73 /* Assets.xcassets */; };
 		5DD56FC62AF17E4200CA5D73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DD56FC52AF17E4200CA5D73 /* Preview Assets.xcassets */; };
 		5DD56FCD2AF1812A00CA5D73 /* vstackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FCC2AF1812A00CA5D73 /* vstackView.swift */; };
+		5DD56FCF2AF1840000CA5D73 /* hstackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FCE2AF1840000CA5D73 /* hstackView.swift */; };
+		5DD56FD12AF1852300CA5D73 /* hvStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FD02AF1852300CA5D73 /* hvStacks.swift */; };
+		5DD56FD32AF185B500CA5D73 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FD22AF185B500CA5D73 /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		5DD56FC22AF17E4200CA5D73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DD56FC52AF17E4200CA5D73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5DD56FCC2AF1812A00CA5D73 /* vstackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vstackView.swift; sourceTree = "<group>"; };
+		5DD56FCE2AF1840000CA5D73 /* hstackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hstackView.swift; sourceTree = "<group>"; };
+		5DD56FD02AF1852300CA5D73 /* hvStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hvStacks.swift; sourceTree = "<group>"; };
+		5DD56FD22AF185B500CA5D73 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 				5DD56FC22AF17E4200CA5D73 /* Assets.xcassets */,
 				5DD56FC42AF17E4200CA5D73 /* Preview Content */,
 				5DD56FCC2AF1812A00CA5D73 /* vstackView.swift */,
+				5DD56FCE2AF1840000CA5D73 /* hstackView.swift */,
+				5DD56FD02AF1852300CA5D73 /* hvStacks.swift */,
+				5DD56FD22AF185B500CA5D73 /* ImageView.swift */,
 			);
 			path = KcSwfitUIComponents;
 			sourceTree = "<group>";
@@ -140,8 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DD56FD32AF185B500CA5D73 /* ImageView.swift in Sources */,
+				5DD56FCF2AF1840000CA5D73 /* hstackView.swift in Sources */,
 				5DD56FC12AF17E4000CA5D73 /* ContentView.swift in Sources */,
 				5DD56FCD2AF1812A00CA5D73 /* vstackView.swift in Sources */,
+				5DD56FD12AF1852300CA5D73 /* hvStacks.swift in Sources */,
 				5DD56FBF2AF17E4000CA5D73 /* KcSwfitUIComponentsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
