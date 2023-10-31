@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct ModalView: View {
+    @State var showDetail = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            // Action Here
+            showDetail.toggle()
+        }, label: {
+            Text("Show Modal")
+        })
+        .sheet(isPresented: $showDetail, content: {
+            
+            DetailModalView(showDetail: $showDetail)
+        })
     }
 }
 
