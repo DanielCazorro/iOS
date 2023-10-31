@@ -9,10 +9,28 @@ import SwiftUI
 
 struct ImageView: View {
     var body: some View {
-        Image(systemName: "house")
-            .resizable()
+        VStack{
+            Image(systemName: "house")
+                .resizable()
+                .frame(width: 200, height: 200)
+            
+            Divider()
+            
+            // Imagen asíncrona...
+            AsyncImage(url: URL(string: "https://www.monsterhunter.com/world/sp/images/top/bg_mv.jpg")) { Image in
+                Image
+                    .resizable()
+                
+            } placeholder: {
+                ProgressView()
+                .progressViewStyle(CircularProgressViewStyle(tint: .blue))
+                .scaleEffect(4)
+            }
             .frame(width: 200, height: 200)
             
+            
+            
+        }
     }
 }
 
