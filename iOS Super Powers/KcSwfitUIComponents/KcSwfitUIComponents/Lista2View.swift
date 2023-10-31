@@ -4,7 +4,7 @@
 //
 //  Created by Daniel Cazorro Frías on 31/10/23.
 //
-
+/*
 import SwiftUI
 
 // Modelo de Hero
@@ -55,3 +55,4 @@ struct Lista2View: View {
 #Preview {
     Lista2View()
 }
+*/
