@@ -13,12 +13,13 @@
 		5DD56FC62AF17E4200CA5D73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DD56FC52AF17E4200CA5D73 /* Preview Assets.xcassets */; };
 		5DD56FCD2AF1812A00CA5D73 /* vstackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FCC2AF1812A00CA5D73 /* vstackView.swift */; };
 		5DD56FCF2AF1840000CA5D73 /* hstackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FCE2AF1840000CA5D73 /* hstackView.swift */; };
-		5DD56FD12AF1852300CA5D73 /* hvStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FD02AF1852300CA5D73 /* hvStacks.swift */; };
+		5DD56FD12AF1852300CA5D73 /* hvStacksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FD02AF1852300CA5D73 /* hvStacksView.swift */; };
 		5DD56FD32AF185B500CA5D73 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FD22AF185B500CA5D73 /* ImageView.swift */; };
 		5DD56FD52AF18A0400CA5D73 /* ZstackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FD42AF18A0400CA5D73 /* ZstackView.swift */; };
 		5DD56FD72AF18B4100CA5D73 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FD62AF18B4100CA5D73 /* ButtonView.swift */; };
 		5DD56FD92AF18EC300CA5D73 /* Listas01View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FD82AF18EC300CA5D73 /* Listas01View.swift */; };
 		5DD56FDB2AF1962000CA5D73 /* Lista2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FDA2AF1962000CA5D73 /* Lista2View.swift */; };
+		5DD56FDD2AF1993100CA5D73 /* Listas3SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FDC2AF1993100CA5D73 /* Listas3SwipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,12 +30,13 @@
 		5DD56FC52AF17E4200CA5D73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5DD56FCC2AF1812A00CA5D73 /* vstackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vstackView.swift; sourceTree = "<group>"; };
 		5DD56FCE2AF1840000CA5D73 /* hstackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hstackView.swift; sourceTree = "<group>"; };
-		5DD56FD02AF1852300CA5D73 /* hvStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hvStacks.swift; sourceTree = "<group>"; };
+		5DD56FD02AF1852300CA5D73 /* hvStacksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hvStacksView.swift; sourceTree = "<group>"; };
 		5DD56FD22AF185B500CA5D73 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		5DD56FD42AF18A0400CA5D73 /* ZstackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZstackView.swift; sourceTree = "<group>"; };
 		5DD56FD62AF18B4100CA5D73 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		5DD56FD82AF18EC300CA5D73 /* Listas01View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listas01View.swift; sourceTree = "<group>"; };
 		5DD56FDA2AF1962000CA5D73 /* Lista2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lista2View.swift; sourceTree = "<group>"; };
+		5DD56FDC2AF1993100CA5D73 /* Listas3SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listas3SwipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +75,13 @@
 				5DD56FC42AF17E4200CA5D73 /* Preview Content */,
 				5DD56FCC2AF1812A00CA5D73 /* vstackView.swift */,
 				5DD56FCE2AF1840000CA5D73 /* hstackView.swift */,
-				5DD56FD02AF1852300CA5D73 /* hvStacks.swift */,
+				5DD56FD02AF1852300CA5D73 /* hvStacksView.swift */,
 				5DD56FD22AF185B500CA5D73 /* ImageView.swift */,
 				5DD56FD42AF18A0400CA5D73 /* ZstackView.swift */,
 				5DD56FD62AF18B4100CA5D73 /* ButtonView.swift */,
 				5DD56FD82AF18EC300CA5D73 /* Listas01View.swift */,
 				5DD56FDA2AF1962000CA5D73 /* Lista2View.swift */,
+				5DD56FDC2AF1993100CA5D73 /* Listas3SwipeView.swift */,
 			);
 			path = KcSwfitUIComponents;
 			sourceTree = "<group>";
@@ -163,11 +166,12 @@
 			files = (
 				5DD56FD32AF185B500CA5D73 /* ImageView.swift in Sources */,
 				5DD56FCF2AF1840000CA5D73 /* hstackView.swift in Sources */,
+				5DD56FDD2AF1993100CA5D73 /* Listas3SwipeView.swift in Sources */,
 				5DD56FD72AF18B4100CA5D73 /* ButtonView.swift in Sources */,
 				5DD56FC12AF17E4000CA5D73 /* ContentView.swift in Sources */,
 				5DD56FD52AF18A0400CA5D73 /* ZstackView.swift in Sources */,
 				5DD56FCD2AF1812A00CA5D73 /* vstackView.swift in Sources */,
-				5DD56FD12AF1852300CA5D73 /* hvStacks.swift in Sources */,
+				5DD56FD12AF1852300CA5D73 /* hvStacksView.swift in Sources */,
 				5DD56FD92AF18EC300CA5D73 /* Listas01View.swift in Sources */,
 				5DD56FBF2AF17E4000CA5D73 /* KcSwfitUIComponentsApp.swift in Sources */,
 				5DD56FDB2AF1962000CA5D73 /* Lista2View.swift in Sources */,
