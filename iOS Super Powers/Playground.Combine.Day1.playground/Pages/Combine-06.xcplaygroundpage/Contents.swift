@@ -9,7 +9,6 @@ import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 
 
-
 // Creamos un ViewModel
 
 final class viewModelPhoto {
