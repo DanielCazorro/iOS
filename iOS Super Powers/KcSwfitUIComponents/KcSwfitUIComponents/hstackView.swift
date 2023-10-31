@@ -21,6 +21,7 @@ struct hstackView: View {
         }
         .frame(width: 300, height: 150)
         .background(Color.yellow)
+        .cornerRadius(25)
 
     }
 }

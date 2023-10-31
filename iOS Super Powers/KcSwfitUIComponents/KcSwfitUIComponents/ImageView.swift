@@ -26,9 +26,14 @@ struct ImageView: View {
                 .progressViewStyle(CircularProgressViewStyle(tint: .blue))
                 .scaleEffect(4)
             }
-            .frame(width: 200, height: 200)
+            .frame(width: 150, height: 200)
             
+            Divider()
             
+            Image(decorative: "linterna")
+                .resizable()
+                .frame(width: 200, height: 200)
+                .cornerRadius(25)
             
         }
     }
