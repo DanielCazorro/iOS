@@ -9,7 +9,27 @@ import SwiftUI
 
 struct ZstackView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            // Imagen linterna verde
+            Image(decorative: "linterna")
+                .resizable()
+                .frame(width: 200, height: 200)
+                .cornerRadius(25)
+            
+            // Capa oscura transparente
+            Image(decorative: "")
+                .resizable()
+                .background(.black)
+                .frame(width: 200, height: 200)
+                .cornerRadius(25)
+                .opacity(0.3)
+
+                // Título
+                Text("Linterna Verde")
+                    .font(.title)
+                    .foregroundStyle(.white)
+            
+        }
     }
 }
 

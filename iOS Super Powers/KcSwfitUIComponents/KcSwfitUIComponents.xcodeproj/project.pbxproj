@@ -16,6 +16,7 @@
 		5DD56FD12AF1852300CA5D73 /* hvStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FD02AF1852300CA5D73 /* hvStacks.swift */; };
 		5DD56FD32AF185B500CA5D73 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FD22AF185B500CA5D73 /* ImageView.swift */; };
 		5DD56FD52AF18A0400CA5D73 /* ZstackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FD42AF18A0400CA5D73 /* ZstackView.swift */; };
+		5DD56FD72AF18B4100CA5D73 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FD62AF18B4100CA5D73 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		5DD56FD02AF1852300CA5D73 /* hvStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hvStacks.swift; sourceTree = "<group>"; };
 		5DD56FD22AF185B500CA5D73 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		5DD56FD42AF18A0400CA5D73 /* ZstackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZstackView.swift; sourceTree = "<group>"; };
+		5DD56FD62AF18B4100CA5D73 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				5DD56FD02AF1852300CA5D73 /* hvStacks.swift */,
 				5DD56FD22AF185B500CA5D73 /* ImageView.swift */,
 				5DD56FD42AF18A0400CA5D73 /* ZstackView.swift */,
+				5DD56FD62AF18B4100CA5D73 /* ButtonView.swift */,
 			);
 			path = KcSwfitUIComponents;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				5DD56FD32AF185B500CA5D73 /* ImageView.swift in Sources */,
 				5DD56FCF2AF1840000CA5D73 /* hstackView.swift in Sources */,
+				5DD56FD72AF18B4100CA5D73 /* ButtonView.swift in Sources */,
 				5DD56FC12AF17E4000CA5D73 /* ContentView.swift in Sources */,
 				5DD56FD52AF18A0400CA5D73 /* ZstackView.swift in Sources */,
 				5DD56FCD2AF1812A00CA5D73 /* vstackView.swift in Sources */,
