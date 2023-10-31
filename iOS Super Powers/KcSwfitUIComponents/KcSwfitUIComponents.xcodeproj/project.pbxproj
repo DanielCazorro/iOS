@@ -28,6 +28,7 @@
 		5DD56FE92AF1A34D00CA5D73 /* FormularioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FE82AF1A34D00CA5D73 /* FormularioView.swift */; };
 		5DD56FEB2AF1A70B00CA5D73 /* ScrollContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FEA2AF1A70B00CA5D73 /* ScrollContentView.swift */; };
 		5DD56FEE2AF1A94600CA5D73 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FED2AF1A94600CA5D73 /* ChartsView.swift */; };
+		5DD56FF02AF1AB5700CA5D73 /* NavigationDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD56FEF2AF1AB5700CA5D73 /* NavigationDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		5DD56FE82AF1A34D00CA5D73 /* FormularioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioView.swift; sourceTree = "<group>"; };
 		5DD56FEA2AF1A70B00CA5D73 /* ScrollContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollContentView.swift; sourceTree = "<group>"; };
 		5DD56FED2AF1A94600CA5D73 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
+		5DD56FEF2AF1AB5700CA5D73 /* NavigationDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				5DD56FED2AF1A94600CA5D73 /* ChartsView.swift */,
+				5DD56FEF2AF1AB5700CA5D73 /* NavigationDataView.swift */,
 			);
 			path = iOS16;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				5DD56FD12AF1852300CA5D73 /* hvStacksView.swift in Sources */,
 				5DD56FD92AF18EC300CA5D73 /* Listas01View.swift in Sources */,
 				5DD56FE52AF19FF600CA5D73 /* ModalView.swift in Sources */,
+				5DD56FF02AF1AB5700CA5D73 /* NavigationDataView.swift in Sources */,
 				5DD56FE32AF19DF800CA5D73 /* HeroDetailView.swift in Sources */,
 				5DD56FE92AF1A34D00CA5D73 /* FormularioView.swift in Sources */,
 				5DD56FE72AF1A0AF00CA5D73 /* DetailModalView.swift in Sources */,
