@@ -16,19 +16,17 @@ struct ScrollContentView: View {
             ScrollView {
                 
                 Button(action: {
-                    // Ir a la id = 45
-                    withAnimation {
+                    withAnimation() {
                         value.scrollTo(99)
                     }
                     
                 }, label: {
-                    Text("Saltar al 100")
+                    Text("Ir al final")
                 })
                 
                 
-                
                 ForEach(0..<100) { i in
-                    Text("Example \(i)")
+                    Text("Número \(i)")
                         .font(.title)
                         .frame(width: 200, height: 200)
                         .background(colors[i % colors.count])
@@ -47,7 +45,6 @@ struct ScrollContentView: View {
                 })
             }
         }
-        
     }
 }
 
