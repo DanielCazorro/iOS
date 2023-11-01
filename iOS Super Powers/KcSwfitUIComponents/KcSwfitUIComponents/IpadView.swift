@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct IpadView: View {
-    @State private var heros = ["Goku","Krillin","Vegeta"]
+    @State private var heros = ["Goku","Krillin","Vegeta","Son Gohan"]
     @State private var selectedHero: String?
     
     var body: some View {
