@@ -17,6 +17,16 @@ struct EmpleadoRowView: View {
             Image(systemName: "person")
                 .resizable()
                 .frame(width: 100, height: 100)
+            
+            #if os(watchOS)
+            HStack {
+                Spacer()
+                Text("\(employee.nombre)")
+                
+                Spacer()
+            }
+            
+            #else
             HStack {
                 Spacer()
                 Text("\(employee.nombre) \(employee.apell1)")
@@ -26,6 +36,8 @@ struct EmpleadoRowView: View {
                 }
                 Spacer()
             }
+            #endif
+            
             Spacer()
         }
         .padding()
