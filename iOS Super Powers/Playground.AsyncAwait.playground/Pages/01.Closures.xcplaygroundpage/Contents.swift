@@ -1,6 +1,6 @@
 /*
  
-    Closures
+ Closures
  
  */
 import Foundation
@@ -48,7 +48,7 @@ final class testLoad {
                     if let datos = data {
                         // Decode
                         let model = try JSONDecoder().decode([BootCamps].self, from: datos)
-                         
+                        
                         // Enviamos
                         onSuccess(model)
                         
@@ -76,3 +76,26 @@ final class testLoad {
 
 
 // La llamada a la función de la clase...
+
+let obj = testLoad()
+
+obj.loadBootCamps { data in
+    // Success
+    DispatchQueue.main.async{
+        print("Cargados los BootCamps")
+        data.forEach{ bootcamp in
+            print("\(bootcamp.id) - \(bootcamp.name)")
+            
+        }
+    }
+    
+    
+} onError: {
+    // Error
+    DispatchQueue.main.async{
+        print("Error")
+    }
+    
+}
+
+

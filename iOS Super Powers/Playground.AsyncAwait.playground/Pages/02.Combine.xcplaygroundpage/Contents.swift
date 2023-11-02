@@ -1,7 +1,8 @@
-//: [Previous](@previous)
-
+/*
+ 
+ Closures
+ 
+ */
 import Foundation
-
-var greeting = "Hello, playground"
-
-//: [Next](@next)
+import PlaygroundSupport
+PlaygroundPage.current.needsIndefiniteExecution = true
