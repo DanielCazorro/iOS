@@ -11,6 +11,8 @@
 		5DAF7CED2AF41C0B000DA790 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAF7CEC2AF41C0B000DA790 /* ContentView.swift */; };
 		5DAF7CEF2AF41C0D000DA790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DAF7CEE2AF41C0D000DA790 /* Assets.xcassets */; };
 		5DAF7CF32AF41C0D000DA790 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DAF7CF22AF41C0D000DA790 /* Preview Assets.xcassets */; };
+		5DAF7CFB2AF41C66000DA790 /* Empleados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAF7CFA2AF41C66000DA790 /* Empleados.swift */; };
+		5DAF7CFD2AF41DF1000DA790 /* EmpleadoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAF7CFC2AF41DF1000DA790 /* EmpleadoRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		5DAF7CEE2AF41C0D000DA790 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DAF7CF02AF41C0D000DA790 /* kcMultiplataforma2023.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kcMultiplataforma2023.entitlements; sourceTree = "<group>"; };
 		5DAF7CF22AF41C0D000DA790 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5DAF7CFA2AF41C66000DA790 /* Empleados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empleados.swift; sourceTree = "<group>"; };
+		5DAF7CFC2AF41DF1000DA790 /* EmpleadoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpleadoRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +56,13 @@
 		5DAF7CE92AF41C0B000DA790 /* kcMultiplataforma2023 */ = {
 			isa = PBXGroup;
 			children = (
+				5DAF7CF92AF41C55000DA790 /* Models */,
 				5DAF7CEA2AF41C0B000DA790 /* kcMultiplataforma2023App.swift */,
 				5DAF7CEC2AF41C0B000DA790 /* ContentView.swift */,
 				5DAF7CEE2AF41C0D000DA790 /* Assets.xcassets */,
 				5DAF7CF02AF41C0D000DA790 /* kcMultiplataforma2023.entitlements */,
 				5DAF7CF12AF41C0D000DA790 /* Preview Content */,
+				5DAF7CFC2AF41DF1000DA790 /* EmpleadoRowView.swift */,
 			);
 			path = kcMultiplataforma2023;
 			sourceTree = "<group>";
@@ -67,6 +73,14 @@
 				5DAF7CF22AF41C0D000DA790 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5DAF7CF92AF41C55000DA790 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5DAF7CFA2AF41C66000DA790 /* Empleados.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DAF7CED2AF41C0B000DA790 /* ContentView.swift in Sources */,
+				5DAF7CFB2AF41C66000DA790 /* Empleados.swift in Sources */,
+				5DAF7CFD2AF41DF1000DA790 /* EmpleadoRowView.swift in Sources */,
 				5DAF7CEB2AF41C0B000DA790 /* kcMultiplataforma2023App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    private var Employees = getTestData()
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List {
+            ForEach(Employees) { rh in
+                EmpleadoRowView(employee: rh)
+            }
         }
-        .padding()
+        
     }
 }
 
