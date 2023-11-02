@@ -22,7 +22,7 @@ enum Estados {
 }
 
 
-// ---------- View ---------
+// ---------- ViewModel ---------
 
 final class ViewModelPerson: ObservableObject {
     
@@ -45,3 +45,49 @@ final class ViewModelPerson: ObservableObject {
         }
     }
 }
+
+
+// ---------- View SwiftUI ----------
+
+struct ContentView : View {
+    
+    @StateObject private var viewModel = ViewModelPerson()
+    
+    var body: some View{
+        
+        switch viewModel.estado {
+        case .none:
+            Text("Estado none")
+            
+        case .loading:
+            Text("Cargando datos")
+            
+        case .error:
+            Text("Se ha producido un error")
+            
+        case .loaded:
+            VStack{
+                if let data = viewModel.data {
+                    // Imagen del empleado
+                    Image(systemName: "person")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                    
+                    // Nombre
+                    //let fullName = data.name + " " + data.apells
+                    //Text(fullName)
+                    Text("\(data.name) \(data.apells) ")
+                    
+                } else {
+                    Text("No hay datos")
+                }
+            }
+            .padding()
+            
+        }
+    }
+}
+
+
+// Ejecuta la salida de la view en el Playground
+PlaygroundPage.current.setLiveView(ContentView().frame(width:200, height: 200))
