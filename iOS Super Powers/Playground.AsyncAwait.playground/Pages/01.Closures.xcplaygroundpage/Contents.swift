@@ -31,6 +31,48 @@ extension URLResponse {
 final class testLoad {
     func loadBootCamps(onSuccess: @escaping successClosure, onError: errorClosure) -> Void{
         let url = URL(String: "https://dragonball.keepcoding.education/api/data/bootcamps")
-        let request : URLRequest = URLRequest(url: url)
+        var request : URLRequest = URLRequest(url: url!)
+        request.httpMethod = "GET"
+        
+        let task = URLSession.shared.dataTask(with: request){ data, response, error in
+            
+            // Aquí ha terminado la llamada
+            if error != nil {
+                onError!() // OJO!! Desempaquetar aquí...
+                return
+            }
+            
+            // Evaluar respuesta
+            if (response?.getStatusCode() == 200){
+                do{
+                    if let datos = data {
+                        // Decode
+                        let model = try JSONDecoder().decode([BootCamps].self, from: datos)
+                         
+                        // Enviamos
+                        onSuccess(model)
+                        
+                        
+                    } else {
+                        // No vienen datos
+                        onError!
+                    }
+                    
+                } catch {
+                    onError!
+                }
+                
+                
+            } else {
+                // Error
+                onError!()
+            }
+        }
+        
+        task.resume()
     }
 }
+
+
+
+// La llamada a la función de la clase...
