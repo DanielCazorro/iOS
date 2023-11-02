@@ -19,20 +19,32 @@ final class testLoad{
         
         let (data, _) = try await URLSession.shared.data(from: url!)
         
+        // 200, etc.
+        
         return try JSONDecoder().decode([BootCamps].self, from: data)
         
     }
 }
 
 // Task
-// Task provee de un contexto asíncrono para ejecución código concurrente. A task se le puede indicar la prioridad:
-// Task(priority: .medium) . Hay 6 tipos de prioridades: high medium low userInitiated utility background
+/*
+ Que es Task? Provee de un contexto asincrono para ejecucion codigo concurrente.
+ A Task se le puede indicar la prioridad:
+ 
+Task(priority: .medium) . Hay 6 tipos de prioridades
+  high
+  medium
+  low
+  userInitiated
+  utility
+  background*/
 Task(priority: .high){
     let obj = testLoad()
     let data = try await obj.loadBootCamps()
     
     data.forEach{ bootcamp in
         print("\(bootcamp.id) - \(bootcamp.name)")
+        print("Async-Await")
         
     }
 }
