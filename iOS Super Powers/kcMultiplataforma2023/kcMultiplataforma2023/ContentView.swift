@@ -13,12 +13,20 @@ struct ContentView: View {
     
     
     var body: some View {
-        List {
-            ForEach(Employees) { rh in
-                EmpleadoRowView(employee: rh)
+        NavigationStack {
+            List {
+                ForEach(Employees) { rh in
+                    NavigationLink {
+                        // Destination
+                        Text("Destino")
+                    } label: {
+                        EmpleadoRowView(employee: rh)
+                    }
+
+                }
             }
+            .navigationTitle("Empleados")
         }
-        
     }
 }
 

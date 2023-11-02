@@ -13,6 +13,7 @@
 		5DAF7CF32AF41C0D000DA790 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DAF7CF22AF41C0D000DA790 /* Preview Assets.xcassets */; };
 		5DAF7CFB2AF41C66000DA790 /* Empleados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAF7CFA2AF41C66000DA790 /* Empleados.swift */; };
 		5DAF7CFD2AF41DF1000DA790 /* EmpleadoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAF7CFC2AF41DF1000DA790 /* EmpleadoRowView.swift */; };
+		5DAF7CFF2AF42214000DA790 /* EmployeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAF7CFE2AF42214000DA790 /* EmployeeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5DAF7CF22AF41C0D000DA790 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5DAF7CFA2AF41C66000DA790 /* Empleados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empleados.swift; sourceTree = "<group>"; };
 		5DAF7CFC2AF41DF1000DA790 /* EmpleadoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpleadoRowView.swift; sourceTree = "<group>"; };
+		5DAF7CFE2AF42214000DA790 /* EmployeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				5DAF7CF02AF41C0D000DA790 /* kcMultiplataforma2023.entitlements */,
 				5DAF7CF12AF41C0D000DA790 /* Preview Content */,
 				5DAF7CFC2AF41DF1000DA790 /* EmpleadoRowView.swift */,
+				5DAF7CFE2AF42214000DA790 /* EmployeeDetailView.swift */,
 			);
 			path = kcMultiplataforma2023;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				5DAF7CED2AF41C0B000DA790 /* ContentView.swift in Sources */,
 				5DAF7CFB2AF41C66000DA790 /* Empleados.swift in Sources */,
+				5DAF7CFF2AF42214000DA790 /* EmployeeDetailView.swift in Sources */,
 				5DAF7CFD2AF41DF1000DA790 /* EmpleadoRowView.swift in Sources */,
 				5DAF7CEB2AF41C0B000DA790 /* kcMultiplataforma2023App.swift in Sources */,
 			);
