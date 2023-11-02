@@ -83,7 +83,14 @@ struct ContentView : View {
                 }
             }
             .padding()
-            
+            .onReceive(self.viewModel.$data, perform: { _ in
+                // Se ejecuta antes de repintar la UI
+                print("Cambia el dato...\(self.viewModel.data?.name)")
+            })
+            .onReceive(self.viewModel.$estado, perform: { _ in
+                // Se ejecuta antes de repintar la UI
+                print("Cambia el estado")
+            })
         }
     }
 }
