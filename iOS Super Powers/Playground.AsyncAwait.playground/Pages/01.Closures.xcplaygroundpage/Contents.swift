@@ -30,7 +30,7 @@ extension URLResponse {
 
 final class testLoad {
     func loadBootCamps(onSuccess: @escaping successClosure, onError: errorClosure) -> Void{
-        let url = URL(String: "https://dragonball.keepcoding.education/api/data/bootcamps")
+        let url = URL(string: "https://dragonball.keepcoding.education/api/data/bootcamps")
         var request : URLRequest = URLRequest(url: url!)
         request.httpMethod = "GET"
         
