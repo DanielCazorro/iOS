@@ -18,7 +18,7 @@ struct ContentView: View {
                 ForEach(Employees) { rh in
                     NavigationLink {
                         // Destination
-                        Text("Destino")
+                        EmployeeDetailView(employee: rh)
                     } label: {
                         EmpleadoRowView(employee: rh)
                     }

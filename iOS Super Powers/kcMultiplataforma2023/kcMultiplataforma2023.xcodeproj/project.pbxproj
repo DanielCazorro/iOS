@@ -58,14 +58,11 @@
 		5DAF7CE92AF41C0B000DA790 /* kcMultiplataforma2023 */ = {
 			isa = PBXGroup;
 			children = (
-				5DAF7CF92AF41C55000DA790 /* Models */,
 				5DAF7CEA2AF41C0B000DA790 /* kcMultiplataforma2023App.swift */,
-				5DAF7CEC2AF41C0B000DA790 /* ContentView.swift */,
+				5DAF7D002AF423CF000DA790 /* Shared */,
 				5DAF7CEE2AF41C0D000DA790 /* Assets.xcassets */,
 				5DAF7CF02AF41C0D000DA790 /* kcMultiplataforma2023.entitlements */,
 				5DAF7CF12AF41C0D000DA790 /* Preview Content */,
-				5DAF7CFC2AF41DF1000DA790 /* EmpleadoRowView.swift */,
-				5DAF7CFE2AF42214000DA790 /* EmployeeDetailView.swift */,
 			);
 			path = kcMultiplataforma2023;
 			sourceTree = "<group>";
@@ -84,6 +81,17 @@
 				5DAF7CFA2AF41C66000DA790 /* Empleados.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5DAF7D002AF423CF000DA790 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5DAF7CF92AF41C55000DA790 /* Models */,
+				5DAF7CEC2AF41C0B000DA790 /* ContentView.swift */,
+				5DAF7CFC2AF41DF1000DA790 /* EmpleadoRowView.swift */,
+				5DAF7CFE2AF42214000DA790 /* EmployeeDetailView.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
