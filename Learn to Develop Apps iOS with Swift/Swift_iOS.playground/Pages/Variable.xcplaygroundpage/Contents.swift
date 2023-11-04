@@ -1,6 +1,6 @@
 import UIKit
 
-//MARK: - 2.- Variables y Tipos -
+//MARK: - 2 - Variables y Tipos -
 
 // Definiendo una variable -> var nombreVariable: TipoDato
 var letter: String
