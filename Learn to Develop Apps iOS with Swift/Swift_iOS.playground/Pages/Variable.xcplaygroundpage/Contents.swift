@@ -37,3 +37,6 @@ var letterFinalPrice2 = letterPrice + Float(letterBigPrice)
 
 var division = 10 / 3
 var modulo = 10 % 3
+
+
+
