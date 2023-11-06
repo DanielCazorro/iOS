@@ -8,6 +8,8 @@
 import KeychainSwift
 
 // Guardamos
+
+@discardableResult
 func saveKC(key: String, value: String) -> Bool {
     // Conviertiendo cadena value en data con codificación utf8
     if let data = value.data(using: .utf8){

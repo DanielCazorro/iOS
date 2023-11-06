@@ -8,6 +8,8 @@
 import Foundation
 import Combine
 
+public let CONST_TOKEN_ID = "TokenJWTAppiOSBoot17"
+
 final class RootViewModel: ObservableObject {
     @Published var status = Status.none // Estado
     @Published var isLogged: Bool = false // Indica si el usuario está logueado
@@ -17,6 +19,14 @@ final class RootViewModel: ObservableObject {
         didSet {
             print("Llega login: \(tokenJWT)")
             // Guardar en el KeyChain
+            saveKC(key: CONST_TOKEN_ID, value: tokenJWT)
+            
+            if tokenJWT.count > 0 {
+                isLogged = true
+            } else {
+                isLogged = false
+            }
+            
         }
     }
     
