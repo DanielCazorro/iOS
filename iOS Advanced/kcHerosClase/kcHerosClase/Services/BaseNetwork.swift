@@ -47,4 +47,25 @@ struct BaseNetwork {
         return request
         
     }
+    
+    // Montamos el request de heroes
+    func getSessionHero(filter: String) -> URLRequest {
+        let urlCad = "\(server)\(endpoints.login.rawValue)"
+        
+        var request: URLRequest = URLRequest(url: URL(string: urlCad)!)
+        request.httpMethod = HTTPMethods.post
+        
+        // Generamos el JSON y lo metemos en el body de la llamada
+        request.httpBody = try? JSONEncoder().encode(HerosFilter(name: filter))
+        request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-type")
+        
+        // Seguridad JWT
+        let tokenOptional = loadKC(key: CONST_TOKEN_ID)
+        if let tokenJWT = tokenOptional {
+            request.addValue("Bearer \(tokenJWT)", forHTTPHeaderField: "Authorization")
+        }
+        
+        return request
+    }
+    
 }
