@@ -11,8 +11,14 @@ struct LoginView: View {
     // Pilla la instancia del environment
     // @EnvironmentObject var rootViewModel: RootViewModel
     
+#if DEBUG
     @State private var email = ""
     @State private var password = ""
+#else
+    @State private var email = ""
+    @State private var password = ""
+    
+#endif
     
     var body: some View {
         ZStack{
@@ -91,7 +97,7 @@ struct LoginView: View {
                     Text("¿No tienes cuenta?")
                         .foregroundStyle(.white)
                         .bold()
-
+                    
                     Button(action: {
                         // Ir al registro de la app...
                     }, label: {
@@ -102,7 +108,7 @@ struct LoginView: View {
                 .padding(.bottom, 25)
             }
             
-        
+            
         }
         .ignoresSafeArea()
         
@@ -114,5 +120,6 @@ struct LoginView: View {
 #Preview {
     LoginView()
         .environment(\.locale, .init(identifier: "es"))
-       // .environment(\.locale, .init(identifier: "en"))
+    // .environment(\.locale, .init(identifier: "en"))
+        .preferredColorScheme(.dark)
 }
