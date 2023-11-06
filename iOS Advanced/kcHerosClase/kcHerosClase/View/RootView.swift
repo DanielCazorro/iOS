@@ -15,17 +15,22 @@ struct RootView: View {
         
         switch rootViewModel.status {
         case Status.none:
-            LoginView() // lgin
+            withAnimation {
+                LoginView() // Login
+            }
+          
         case .register:
             Text("Registro")
         case .loading:
-            Text("Cargando datos...")
+            withAnimation {
+                LoaderView()
+            }
+
         case .error(error: let errorString):
             Text("Error -> \(errorString)")
         case . loaded:
-            Text("Home de la app")
+            Text("Home app")
         }
-        
     }
 }
 

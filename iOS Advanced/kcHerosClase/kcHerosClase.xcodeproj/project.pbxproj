@@ -25,6 +25,7 @@
 		5D529A292AF97C4C007333B6 /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A282AF97C4C007333B6 /* BaseNetwork.swift */; };
 		5D529A2B2AF98AAB007333B6 /* PropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A2A2AF98AAB007333B6 /* PropertyWrappers.swift */; };
 		5D529A2D2AF98D5B007333B6 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A2C2AF98D5B007333B6 /* RootView.swift */; };
+		5D529A302AF98F5E007333B6 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A2F2AF98F5E007333B6 /* LoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		5D529A282AF97C4C007333B6 /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
 		5D529A2A2AF98AAB007333B6 /* PropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrappers.swift; sourceTree = "<group>"; };
 		5D529A2C2AF98D5B007333B6 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		5D529A2F2AF98F5E007333B6 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 		5D529A122AF964B4007333B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5D529A2E2AF98F4B007333B6 /* Tools */,
 				5D529A132AF964C9007333B6 /* Login */,
 				5D529A2C2AF98D5B007333B6 /* RootView.swift */,
 			);
@@ -217,6 +220,14 @@
 				5D529A142AF964FD007333B6 /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		5D529A2E2AF98F4B007333B6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5D529A2F2AF98F5E007333B6 /* LoaderView.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +373,7 @@
 				5D529A232AF96F4B007333B6 /* RootViewModel.swift in Sources */,
 				5D529A292AF97C4C007333B6 /* BaseNetwork.swift in Sources */,
 				5D529A212AF96A54007333B6 /* KeyChain.swift in Sources */,
+				5D529A302AF98F5E007333B6 /* LoaderView.swift in Sources */,
 				5D5299E32AF9639D007333B6 /* kcHerosClase.xcdatamodeld in Sources */,
 				5D5299E52AF9639D007333B6 /* ContentView.swift in Sources */,
 				5D529A152AF964FD007333B6 /* LoginView.swift in Sources */,

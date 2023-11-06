@@ -47,6 +47,11 @@ final class RootViewModel: ObservableObject {
         self.LoggedUserControl() // Control de si el usuario está ya logueado
     }
     
+    // Cierre de sesión
+    func CloseSession(){
+        tokenJWT = ""
+        status = .none
+    }
     
     // Control de usuario conectado
     func LoggedUserControl() {
