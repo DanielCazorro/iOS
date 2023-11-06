@@ -9,11 +9,11 @@ import SwiftUI
 
 struct LoginView: View {
     // Pilla la instancia del environment
-    // @EnvironmentObject var rootViewModel: RootViewModel
+    @EnvironmentObject var rootViewModel: RootViewModel
     
 #if DEBUG
-    @State private var email = ""
-    @State private var password = ""
+    @State private var email = "bejl@keepcoding.es"
+    @State private var password = "123456"
 #else
     @State private var email = ""
     @State private var password = ""
@@ -74,7 +74,8 @@ struct LoginView: View {
                     
                     // Botón del login
                     Button(action: {
-                        // Acción del login...
+                        rootViewModel.login(user: email, password: password)
+                        
                     }, label: {
                         Text("Entrar")
                             .font(.title)

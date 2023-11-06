@@ -13,7 +13,12 @@ final class RootViewModel: ObservableObject {
     @Published var isLogged: Bool = false // Indica si el usuario está logueado
     
     // Token del login
-    @Published var tokenJWT: String = "" // Aquí el token del login
+    @Published var tokenJWT: String = "" {
+        didSet {
+            print("Llega login: \(tokenJWT)")
+            // Guardar en el KeyChain
+        }
+    }
     
     // Combine
     var suscriptors = Set<AnyCancellable>()
