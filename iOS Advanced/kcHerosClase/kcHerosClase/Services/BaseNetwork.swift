@@ -23,6 +23,7 @@ struct HTTPMethods {
 
 enum endpoints: String {
     case login = "/api/auth/login"
+    case herosList = "api/heros/all"
 }
 
 struct BaseNetwork {
