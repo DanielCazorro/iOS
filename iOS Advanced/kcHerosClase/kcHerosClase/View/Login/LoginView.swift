@@ -48,7 +48,7 @@ struct LoginView: View {
                 
                 // Usuario y clave
                 VStack {
-                    TextField("Hola", text: $email)
+                    TextField("Usuario", text: $email)
                         .padding()
                         .background(Color.white)
                         .foregroundStyle(.blue)
@@ -121,5 +121,5 @@ struct LoginView: View {
     LoginView()
         .environment(\.locale, .init(identifier: "es"))
     // .environment(\.locale, .init(identifier: "en"))
-        .preferredColorScheme(.dark)
+        .preferredColorScheme(.light)
 }

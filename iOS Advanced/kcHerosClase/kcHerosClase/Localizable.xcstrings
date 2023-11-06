@@ -50,6 +50,7 @@
       }
     },
     "Hola" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -143,6 +144,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Test ESP"
+          }
+        }
+      }
+    },
+    "Usuario" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Usuario"
           }
         }
       }
