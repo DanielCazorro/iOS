@@ -21,6 +21,8 @@
 		5D529A212AF96A54007333B6 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A202AF96A54007333B6 /* KeyChain.swift */; };
 		5D529A232AF96F4B007333B6 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A222AF96F4B007333B6 /* RootViewModel.swift */; };
 		5D529A252AF97887007333B6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5D529A242AF97887007333B6 /* Localizable.xcstrings */; };
+		5D529A272AF97B44007333B6 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A262AF97B44007333B6 /* StatusModel.swift */; };
+		5D529A292AF97C4C007333B6 /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A282AF97C4C007333B6 /* BaseNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		5D529A202AF96A54007333B6 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		5D529A222AF96F4B007333B6 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		5D529A242AF97887007333B6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5D529A262AF97B44007333B6 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
+		5D529A282AF97C4C007333B6 /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 		5D529A0E2AF9649B007333B6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5D529A262AF97B44007333B6 /* StatusModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 		5D529A0F2AF964A4007333B6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5D529A282AF97C4C007333B6 /* BaseNetwork.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -346,7 +352,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D5299DE2AF9639D007333B6 /* kcHerosClaseApp.swift in Sources */,
+				5D529A272AF97B44007333B6 /* StatusModel.swift in Sources */,
 				5D529A232AF96F4B007333B6 /* RootViewModel.swift in Sources */,
+				5D529A292AF97C4C007333B6 /* BaseNetwork.swift in Sources */,
 				5D529A212AF96A54007333B6 /* KeyChain.swift in Sources */,
 				5D5299E32AF9639D007333B6 /* kcHerosClase.xcdatamodeld in Sources */,
 				5D5299E52AF9639D007333B6 /* ContentView.swift in Sources */,
