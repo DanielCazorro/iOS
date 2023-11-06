@@ -27,7 +27,10 @@ struct RootView: View {
             }
 
         case .error(error: let errorString):
-            Text("Error -> \(errorString)")
+            withAnimation {
+                ErrorView(error: errorString)
+            }
+
         case . loaded:
             Text("Home app")
         }
