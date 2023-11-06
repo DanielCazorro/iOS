@@ -33,6 +33,23 @@ final class RootViewModel: ObservableObject {
     // Combine
     var suscriptors = Set<AnyCancellable>()
     
+    // Inicializador
+    init() {
+        self.LoggedUserControl() // Control de si el usuario está ya logueado
+    }
+    
+    
+    // Control de usuario conectado
+    func LoggedUserControl() {
+        let tokenOptional = loadKC(key: CONST_TOKEN_ID) // Leemos el token del KeyChain
+        
+        if let token = tokenOptional {
+            tokenJWT = token // Asigno el token guardado
+            status = .loaded
+        }
+        
+    }
+    
     // Login al servidor
     func login(user:String, password: String) {
         

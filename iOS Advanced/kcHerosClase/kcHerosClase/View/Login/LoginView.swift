@@ -123,4 +123,5 @@ struct LoginView: View {
         .environment(\.locale, .init(identifier: "es"))
     // .environment(\.locale, .init(identifier: "en"))
         .preferredColorScheme(.light)
+        .environmentObject(RootViewModel())
 }
