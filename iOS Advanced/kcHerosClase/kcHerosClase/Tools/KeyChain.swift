@@ -28,6 +28,6 @@ func loadKC(key: String) -> String? {
 }
 
 // Borramos
-func deleteKC(key: String) {
-    
+func deleteKC(key: String) -> Bool {
+    KeychainSwift().delete(key)
 }
