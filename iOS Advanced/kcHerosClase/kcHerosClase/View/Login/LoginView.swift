@@ -9,10 +9,13 @@ import SwiftUI
 
 struct LoginView: View {
     var body: some View {
-        Text("I'm Login")
+        Text("Test")
     }
 }
 
+//es, en
 #Preview {
     LoginView()
+        .environment(\.locale, .init(identifier: "es"))
+       // .environment(\.locale, .init(identifier: "en"))
 }
