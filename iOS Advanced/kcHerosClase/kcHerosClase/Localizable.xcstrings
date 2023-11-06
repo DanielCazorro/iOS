@@ -17,6 +17,9 @@
         }
       }
     },
+    "%@" : {
+
+    },
     "Add Item" : {
       "localizations" : {
         "en" : {
@@ -33,7 +36,7 @@
         }
       }
     },
-    "Cargando datos..." : {
+    "Close Session" : {
 
     },
     "Entrar" : {
@@ -52,7 +55,7 @@
         }
       }
     },
-    "Error -> %@" : {
+    "Hey! We are Home" : {
 
     },
     "Hola" : {
@@ -71,9 +74,6 @@
           }
         }
       }
-    },
-    "Home app" : {
-
     },
     "Item at %@" : {
       "localizations" : {
@@ -107,6 +107,9 @@
         }
       }
     },
+    "Por favor espere" : {
+
+    },
     "Registro" : {
       "localizations" : {
         "en" : {
@@ -122,6 +125,9 @@
           }
         }
       }
+    },
+    "Return" : {
+
     },
     "Select an item" : {
       "localizations" : {

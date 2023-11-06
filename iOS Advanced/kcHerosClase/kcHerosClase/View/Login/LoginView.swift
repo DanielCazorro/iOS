@@ -100,7 +100,8 @@ struct LoginView: View {
                         .bold()
                     
                     Button(action: {
-                        // Ir al registro de la app...
+                        rootViewModel.status = .register
+                        
                     }, label: {
                         Text("Registro")
                             .foregroundStyle(.blue)

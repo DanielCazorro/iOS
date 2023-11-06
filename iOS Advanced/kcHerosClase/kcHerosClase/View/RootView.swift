@@ -32,7 +32,9 @@ struct RootView: View {
             }
 
         case . loaded:
-            Text("Home app")
+            withAnimation {
+                HomeView() // La home de la app
+            }
         }
     }
 }
