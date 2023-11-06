@@ -23,6 +23,7 @@
 		5D529A252AF97887007333B6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5D529A242AF97887007333B6 /* Localizable.xcstrings */; };
 		5D529A272AF97B44007333B6 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A262AF97B44007333B6 /* StatusModel.swift */; };
 		5D529A292AF97C4C007333B6 /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A282AF97C4C007333B6 /* BaseNetwork.swift */; };
+		5D529A2B2AF98AAB007333B6 /* PropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A2A2AF98AAB007333B6 /* PropertyWrappers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		5D529A242AF97887007333B6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		5D529A262AF97B44007333B6 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
 		5D529A282AF97C4C007333B6 /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
+		5D529A2A2AF98AAB007333B6 /* PropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrappers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				5D529A202AF96A54007333B6 /* KeyChain.swift */,
+				5D529A2A2AF98AAB007333B6 /* PropertyWrappers.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				5D5299E32AF9639D007333B6 /* kcHerosClase.xcdatamodeld in Sources */,
 				5D5299E52AF9639D007333B6 /* ContentView.swift in Sources */,
 				5D529A152AF964FD007333B6 /* LoginView.swift in Sources */,
+				5D529A2B2AF98AAB007333B6 /* PropertyWrappers.swift in Sources */,
 				5D5299E02AF9639D007333B6 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,6 +15,7 @@ final class RootViewModel: ObservableObject {
     @Published var isLogged: Bool = false // Indica si el usuario está logueado
     
     // Token del login
+    /*
     @Published var tokenJWT: String = "" {
         didSet {
             print("Llega login: \(tokenJWT)")
@@ -29,6 +30,14 @@ final class RootViewModel: ObservableObject {
             
         }
     }
+    */
+    
+    @kcPersistenceKeychain(key: CONST_TOKEN_ID)
+    var tokenJWT {
+        didSet {
+            print("token login \(tokenJWT)")
+        }
+    }
     
     // Combine
     var suscriptors = Set<AnyCancellable>()
@@ -41,13 +50,17 @@ final class RootViewModel: ObservableObject {
     
     // Control de usuario conectado
     func LoggedUserControl() {
+        /*
         let tokenOptional = loadKC(key: CONST_TOKEN_ID) // Leemos el token del KeyChain
         
         if let token = tokenOptional {
             tokenJWT = token // Asigno el token guardado
             status = .loaded
         }
-        
+        */
+        if tokenJWT != "" {
+            status = .loaded
+        }
     }
     
     // Login al servidor
