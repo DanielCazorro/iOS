@@ -30,11 +30,15 @@ struct LoginView: View {
             // Image(.backgroundLogin)  Esta función es igual que la superior, pero solo apta para nuevo iOS
             
             VStack{
+                
+                // Logo Dragon Ball
                 Image(.title)
                     .resizable()
                     .scaledToFit()
                     .opacity(0.8)
-                    // .padding(.top, 160)
+                    .padding(.top, 160)
+                
+                Spacer()
                 
                 // Usuario y clave
                 VStack {
@@ -44,7 +48,44 @@ struct LoginView: View {
                         .foregroundStyle(.blue)
                         .cornerRadius(20)
                         .shadow(radius: 10.0, x:20, y:20)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled()
+                        .opacity(0.8)
+                        .id(1)  // For testing
+                    
+                    SecureField("Password", text: $password)
+                        .padding()
+                        .background(Color.white)
+                        .foregroundStyle(.blue)
+                        .cornerRadius(20)
+                        .shadow(radius: 10.0, x:20, y:20)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled()
+                        .opacity(0.8)
+                        .padding(.top, 20)
+                        .id(2)  // For testing
+                    
+                    
+                    // Botón del login
+                    Button(action: {
+                        // Acción del login...
+                    }, label: {
+                        Text("Entrar")
+                            .font(.title)
+                            .foregroundStyle(.white)
+                            .padding()
+                            .frame(width: 300, height: 50)
+                            .background(Color(uiColor: UIColor(red: 221.0/255.0, green: 99.0/255.0, blue: 0.0, alpha: 1.0))) // Keepcoding Color
+                            .cornerRadius(20)
+                            .shadow(radius: 10, x:20, y:20)
+                    })
+                    .padding(.top, 50)
+                    .opacity(0.8)
+                    .id(3)
                 }
+                .padding([.leading, .trailing], 20)
+                Spacer()
+                
             }
             
         
