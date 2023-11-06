@@ -18,8 +18,16 @@ func saveKC(key: String, value: String) -> Bool {
     }
 }
 
-// Leemos
-func loadKC(key: String)
-
+// Leemos del Keychain
+func loadKC(key: String) -> String? {
+    if let data = KeychainSwift().get(key) {
+        return data
+    } else {
+        return ""
+    }
+}
 
 // Borramos
+func deleteKC(key: String) {
+    
+}
