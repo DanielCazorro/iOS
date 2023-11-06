@@ -36,7 +36,7 @@ struct ErrorView: View {
             // Boton
             Button(action: {
                 // Acción
-                rootViewModel.CloseSession()
+                rootViewModel.status = .none // Volvemos al login
                 
             }, label: {
                 Text("Return")
