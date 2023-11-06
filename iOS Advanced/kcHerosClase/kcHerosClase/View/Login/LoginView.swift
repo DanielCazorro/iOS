@@ -86,6 +86,20 @@ struct LoginView: View {
                 .padding([.leading, .trailing], 20)
                 Spacer()
                 
+                // Link del registro
+                HStack {
+                    Text("¿No tienes cuenta?")
+                        .foregroundStyle(.white)
+                        .bold()
+
+                    Button(action: {
+                        // Ir al registro de la app...
+                    }, label: {
+                        Text("Registro")
+                            .foregroundStyle(.blue)
+                    })
+                }
+                .padding(.bottom, 25)
             }
             
         
