@@ -16,6 +16,7 @@
 		5D5299F52AF9639E007333B6 /* kcHerosClaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5299F42AF9639E007333B6 /* kcHerosClaseTests.swift */; };
 		5D5299FF2AF9639E007333B6 /* kcHerosClaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5299FE2AF9639E007333B6 /* kcHerosClaseUITests.swift */; };
 		5D529A012AF9639E007333B6 /* kcHerosClaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A002AF9639E007333B6 /* kcHerosClaseUITestsLaunchTests.swift */; };
+		5D529A152AF964FD007333B6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A142AF964FD007333B6 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		5D5299FA2AF9639E007333B6 /* kcHerosClaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kcHerosClaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5299FE2AF9639E007333B6 /* kcHerosClaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kcHerosClaseUITests.swift; sourceTree = "<group>"; };
 		5D529A002AF9639E007333B6 /* kcHerosClaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kcHerosClaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5D529A142AF964FD007333B6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5D529A162AF9655B007333B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +102,14 @@
 		5D5299DC2AF9639D007333B6 /* kcHerosClase */ = {
 			isa = PBXGroup;
 			children = (
+				5D529A162AF9655B007333B6 /* Info.plist */,
+				5D529A122AF964B4007333B6 /* View */,
+				5D529A112AF964AF007333B6 /* ViewModels */,
+				5D529A102AF964A9007333B6 /* Tools */,
+				5D529A0F2AF964A4007333B6 /* Services */,
+				5D529A0E2AF9649B007333B6 /* Models */,
+				5D529A0D2AF96462007333B6 /* old */,
 				5D5299DD2AF9639D007333B6 /* kcHerosClaseApp.swift */,
-				5D5299DF2AF9639D007333B6 /* Persistence.swift */,
-				5D5299E42AF9639D007333B6 /* ContentView.swift */,
 				5D5299E62AF9639E007333B6 /* Assets.xcassets */,
 				5D5299E82AF9639E007333B6 /* kcHerosClase.entitlements */,
 				5D5299E12AF9639D007333B6 /* kcHerosClase.xcdatamodeld */,
@@ -133,6 +141,59 @@
 				5D529A002AF9639E007333B6 /* kcHerosClaseUITestsLaunchTests.swift */,
 			);
 			path = kcHerosClaseUITests;
+			sourceTree = "<group>";
+		};
+		5D529A0D2AF96462007333B6 /* old */ = {
+			isa = PBXGroup;
+			children = (
+				5D5299DF2AF9639D007333B6 /* Persistence.swift */,
+				5D5299E42AF9639D007333B6 /* ContentView.swift */,
+			);
+			path = old;
+			sourceTree = "<group>";
+		};
+		5D529A0E2AF9649B007333B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5D529A0F2AF964A4007333B6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5D529A102AF964A9007333B6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		5D529A112AF964AF007333B6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5D529A122AF964B4007333B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D529A132AF964C9007333B6 /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D529A132AF964C9007333B6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5D529A142AF964FD007333B6 /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +329,7 @@
 				5D5299DE2AF9639D007333B6 /* kcHerosClaseApp.swift in Sources */,
 				5D5299E32AF9639D007333B6 /* kcHerosClase.xcdatamodeld in Sources */,
 				5D5299E52AF9639D007333B6 /* ContentView.swift in Sources */,
+				5D529A152AF964FD007333B6 /* LoginView.swift in Sources */,
 				5D5299E02AF9639D007333B6 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +494,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = kcHerosClase/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -470,6 +533,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = kcHerosClase/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

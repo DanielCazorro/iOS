@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct kcHerosClaseApp: App {
-    let persistenceController = PersistenceController.shared
+    let persistenceController = PersistenceController.shared // Core Data
 
     var body: some Scene {
         WindowGroup {
