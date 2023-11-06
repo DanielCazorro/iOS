@@ -11,14 +11,20 @@ struct HomeView: View {
     @EnvironmentObject var rootviewModel: RootViewModel
     
     var body: some View {
-        VStack {
-            Text("Hey! We are Home")
+        TabView {
             
-            Button(action: {
-                rootviewModel.CloseSession()
-            }, label: {
-                Text("Close Session")
-            })
+            VStack{
+                Text("Hero List")
+                Button(action: {
+                    rootviewModel.CloseSession()
+                }, label: {
+                    Text("Close Session")
+                })
+            }
+            .tabItem {
+                Image(systemName: "house")
+                Text("Heros")
+            }
         }
     }
 }
