@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     // Pilla la instancia del environment
-    @EnvironmentObject var rootViewModel: RootViewModel
+    // @EnvironmentObject var rootViewModel: RootViewModel
     
     @State private var email = ""
     @State private var password = ""
@@ -28,9 +28,28 @@ struct LoginView: View {
                 .opacity(0.2)
             
             // Image(.backgroundLogin)  Esta función es igual que la superior, pero solo apta para nuevo iOS
+            
+            VStack{
+                Image(.title)
+                    .resizable()
+                    .scaledToFit()
+                    .opacity(0.8)
+                    // .padding(.top, 160)
+                
+                // Usuario y clave
+                VStack {
+                    TextField("Hola", text: $email)
+                        .padding()
+                        .background(Color.white)
+                        .foregroundStyle(.blue)
+                        .cornerRadius(20)
+                        .shadow(radius: 10.0, x:20, y:20)
+                }
+            }
+            
+        
         }
         .ignoresSafeArea()
-        
         
         
     }
