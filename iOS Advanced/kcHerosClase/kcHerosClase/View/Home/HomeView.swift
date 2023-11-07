@@ -14,7 +14,7 @@ struct HomeView: View {
         TabView {
             
             VStack{
-                Text("Hero List")
+                HerosView(viewModel: viewModelHeros())
                 Button(action: {
                     rootviewModel.CloseSession()
                 }, label: {

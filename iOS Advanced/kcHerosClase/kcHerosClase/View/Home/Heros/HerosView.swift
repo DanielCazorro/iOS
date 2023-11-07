@@ -12,21 +12,29 @@ struct HerosView: View {
     @State private var filter: String = ""
     
     var body: some View {
-            NavigationView {
-                List(viewModel.heros, id: \.name) { data in
-                    NavigationLink(destination: Text("Detalles de \(data.name)")) {
-                        Text("\(data.name)")
+        NavigationStack {
+            List {
+                if let heros = viewModel.heros{
+                    ForEach(heros) { data in
+                        NavigationLink {
+                            
+                        } label: {
+                            HeroesRowView(hero: data)
+                                .frame(height: 200)
+                        }
                     }
                 }
             }
         }
+        
     }
+}
 
-    struct HerosView_Previews: PreviewProvider {
-        static var previews: some View {
-            HerosView(viewModel: viewModelHeros(testing: true))
-        }
+struct HerosView_Previews: PreviewProvider {
+    static var previews: some View {
+        HerosView(viewModel: viewModelHeros(testing: true))
     }
+}
 
 #Preview {
     HerosView(viewModel: viewModelHeros(testing: true))
