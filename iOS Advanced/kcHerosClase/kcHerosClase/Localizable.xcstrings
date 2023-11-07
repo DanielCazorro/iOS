@@ -36,6 +36,9 @@
         }
       }
     },
+    "close" : {
+
+    },
     "Close Session" : {
 
     },
@@ -55,7 +58,7 @@
         }
       }
     },
-    "Hey! We are Home" : {
+    "Heros" : {
 
     },
     "Hola" : {
@@ -127,6 +130,9 @@
       }
     },
     "Return" : {
+
+    },
+    "Search Hero..." : {
 
     },
     "Select an item" : {

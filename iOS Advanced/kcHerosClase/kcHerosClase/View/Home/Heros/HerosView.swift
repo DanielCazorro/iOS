@@ -10,6 +10,7 @@ import SwiftUI
 struct HerosView: View {
     @StateObject var viewModel: viewModelHeros
     @State private var filter: String = ""
+    @EnvironmentObject var viewModelRoot: RootViewModel
     
     var body: some View {
         NavigationStack {
@@ -26,6 +27,20 @@ struct HerosView: View {
                 }
             }
             .navigationTitle("Heros")
+            .toolbar{
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        viewModelRoot.CloseSession()
+                    }, label: {
+                        HStack{
+                            Image(systemName: "xmark.circle")
+                            Text("close")
+                                .font(.caption)
+                        }
+            
+                    })
+                }
+            }
         }
         .searchable(text: $filter, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search Hero...")
         .onChange(of: filter) { oldValue, newValue in
