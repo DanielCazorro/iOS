@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 final class viewModelHeros: ObservableObject {
-    @Published var heros: [Heros] = Array<Heros>()
+    @Published var heros: [Heros]?
     @Published var status = Status.none
     
     var suscriptors = Set<AnyCancellable>()
