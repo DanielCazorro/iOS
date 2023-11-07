@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.colorScheme) var colorScheme
-    private var esmujer = false
+    private var esmujer = true
     
     
     var body: some View {
@@ -20,12 +20,20 @@ struct ContentView: View {
                     // Transformación
                     Text
                         .foregroundStyle(.orange)
+                        .font(.title2)
                 }
                 .if(!esmujer) { Text in
                     // Transformacion
                     Text
                         .foregroundStyle(.blue)
+                        .font(.caption)
                 }
+            /*
+             .if(colorScheme == .dark) { View in
+             View.background(.yellow)
+             } */
+                .background(colorScheme == .light ? Color.gray : Color.yellow)
+            
         }
         .padding()
     }
