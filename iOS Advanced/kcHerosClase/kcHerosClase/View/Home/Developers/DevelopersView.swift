@@ -26,8 +26,35 @@ struct DevelopersView: View {
                     
                     // Si hay developers en el bootcamp
                     if devsBoot.count > 0 {
-                        Text(boot.name)
-                        
+                        VStack(alignment: .leading) {
+                            Text(boot.name)
+                                .font(.title)
+                                .foregroundStyle(.orange)
+                                .bold()
+                            
+                            // Lista tipo netflix
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                LazyHStack{
+                                    ForEach(devsBoot) { dataRow in
+                                        VStack {
+                                            // Foto
+                                            AsyncImage(url: URL(string: dataRow.photo)) { photo in
+                                                photo
+                                            } placeholder: {
+                                                // Place Holder
+                                                Image(systemName: "person")
+                                                    .resizable()
+                                                    .frame(width: 100, height: 100)
+                                                    .padding()
+                                            }
+
+                                            // Nombre
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
                     } else {
                         Text("No")
                     }

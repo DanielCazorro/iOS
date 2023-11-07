@@ -141,10 +141,10 @@ final class RootViewModel: ObservableObject {
     
     // Diseño UI
     func loadBootcampsTesting(){
-        let b1 = BootCamp(id: UUID().uuidString, name: "boot Mobile 1")
-        let b2 = BootCamp(id: UUID().uuidString, name: "boot Mobile 2")
-        let b3 = BootCamp(id: UUID().uuidString, name: "boot Mobile 3")
-        let b4 = BootCamp(id: UUID().uuidString, name: "boot Mobile 4")
+        let b1 = BootCamp(id: "01", name: "boot Mobile 1")
+        let b2 = BootCamp(id: "02", name: "boot Mobile 2")
+        let b3 = BootCamp(id: "03", name: "boot Mobile 3")
+        let b4 = BootCamp(id: "04", name: "boot Mobile 4")
         
         // Asignarlos al modelo
         self.bootcamps = [b1, b2, b3, b4]

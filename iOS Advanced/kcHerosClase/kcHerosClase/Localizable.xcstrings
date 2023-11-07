@@ -94,6 +94,12 @@
         }
       }
     },
+    "No" : {
+
+    },
+    "No hay datos" : {
+
+    },
     "Password" : {
       "localizations" : {
         "en" : {
