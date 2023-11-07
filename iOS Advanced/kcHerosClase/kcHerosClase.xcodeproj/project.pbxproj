@@ -34,6 +34,7 @@
 		5DF862082AFAB91F00DB633C /* HeroesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF862072AFAB91F00DB633C /* HeroesRowView.swift */; };
 		5DF862292AFAD65A00DB633C /* HerosDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF862282AFAD65A00DB633C /* HerosDetailView.swift */; };
 		5DF8622B2AFAD88000DB633C /* DeveloperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF8622A2AFAD88000DB633C /* DeveloperModel.swift */; };
+		5DF8622D2AFAD9CE00DB633C /* ViewModelDevelopers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF8622C2AFAD9CE00DB633C /* ViewModelDevelopers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		5DF862072AFAB91F00DB633C /* HeroesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRowView.swift; sourceTree = "<group>"; };
 		5DF862282AFAD65A00DB633C /* HerosDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosDetailView.swift; sourceTree = "<group>"; };
 		5DF8622A2AFAD88000DB633C /* DeveloperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperModel.swift; sourceTree = "<group>"; };
+		5DF8622C2AFAD9CE00DB633C /* ViewModelDevelopers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDevelopers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			children = (
 				5D529A222AF96F4B007333B6 /* RootViewModel.swift */,
 				5D529A3B2AF99798007333B6 /* viewModelHeros.swift */,
+				5DF8622C2AFAD9CE00DB633C /* ViewModelDevelopers.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				5D5299E32AF9639D007333B6 /* kcHerosClase.xcdatamodeld in Sources */,
 				5D5299E52AF9639D007333B6 /* ContentView.swift in Sources */,
 				5D529A3C2AF99798007333B6 /* viewModelHeros.swift in Sources */,
+				5DF8622D2AFAD9CE00DB633C /* ViewModelDevelopers.swift in Sources */,
 				5D529A152AF964FD007333B6 /* LoginView.swift in Sources */,
 				5D529A2B2AF98AAB007333B6 /* PropertyWrappers.swift in Sources */,
 				5D5299E02AF9639D007333B6 /* Persistence.swift in Sources */,

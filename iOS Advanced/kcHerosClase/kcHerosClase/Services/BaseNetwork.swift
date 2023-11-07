@@ -24,6 +24,7 @@ struct HTTPMethods {
 enum endpoints: String {
     case login = "/api/auth/login"
     case herosList = "api/heros/all"
+    case developerList = "api/data/developers"
 }
 
 struct BaseNetwork {
@@ -58,6 +59,22 @@ struct BaseNetwork {
         // Generamos el JSON y lo metemos en el body de la llamada
         request.httpBody = try? JSONEncoder().encode(HerosFilter(name: filter))
         request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-type")
+        
+        // Seguridad JWT
+        let tokenOptional = loadKC(key: CONST_TOKEN_ID)
+        if let tokenJWT = tokenOptional {
+            request.addValue("Bearer \(tokenJWT)", forHTTPHeaderField: "Authorization")
+        }
+        
+        return request
+    }
+    
+    // Montamos el request de Developers
+    func getSessionDevelopers() -> URLRequest {
+        let urlCad = "\(server)\(endpoints.developerList.rawValue)"
+        
+        var request: URLRequest = URLRequest(url: URL(string: urlCad)!)
+        request.httpMethod = HTTPMethods.get
         
         // Seguridad JWT
         let tokenOptional = loadKC(key: CONST_TOKEN_ID)
