@@ -16,9 +16,9 @@ final class viewModelHeros: ObservableObject {
     
     init(testing: Bool = false){
         if (testing) {
-            
+            getHerosTesting()
         } else {
-            
+            getHeros(filter: "")
         }
         
     }
