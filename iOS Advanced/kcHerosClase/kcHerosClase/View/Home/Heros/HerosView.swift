@@ -18,7 +18,7 @@ struct HerosView: View {
                 if let heros = viewModel.heros{
                     ForEach(heros) { data in
                         NavigationLink {
-                            
+                            HerosDetailView(hero: data, viewModelHeros: viewModelHeros())
                         } label: {
                             HeroesRowView(hero: data)
                                 .frame(height: 200)
