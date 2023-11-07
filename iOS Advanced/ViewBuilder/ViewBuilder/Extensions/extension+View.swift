@@ -32,6 +32,7 @@ extension View {
 
 
 struct KcButton <Content: View>: View {
+    @Environment(\.colorScheme) var colorScheme
     var content: Content
     
     init(@ViewBuilder content: ()->Content){
@@ -42,7 +43,14 @@ struct KcButton <Content: View>: View {
         // Aquí maquetamos...
         content
             .padding()
-            .background()
+            .if(colorScheme == .light) { View in
+                View.background(.blue)
+            }
+            .if(colorScheme == .dark) { View in
+                View.background(.gray)
+            }
+            .foregroundStyle(.white)
+            .cornerRadius(20)
     }
     
     

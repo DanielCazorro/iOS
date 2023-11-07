@@ -43,6 +43,13 @@ struct ContentView: View {
                     Text("Login")
                 })
            }
+            KcButton {
+                 Button(action: {
+                     // Action
+                 }, label: {
+                     Text("Change Pass")
+                 })
+            }
             
         }
         .padding()
