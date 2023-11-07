@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.colorScheme) var colorScheme
+    private var esmujer = true
+    
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Color Hombre / Mujer")
+                .font(.title)
+                .if(<#T##condition: Bool##Bool#>, transform: <#T##(Text) -> View#>)
+            
         }
         .padding()
     }
