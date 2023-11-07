@@ -34,6 +34,16 @@ struct ContentView: View {
              } */
                 .background(colorScheme == .light ? Color.gray : Color.yellow)
             
+            
+            // Boton
+           KcButton {
+                Button(action: {
+                    // Action
+                }, label: {
+                    Text("Login")
+                })
+           }
+            
         }
         .padding()
     }
