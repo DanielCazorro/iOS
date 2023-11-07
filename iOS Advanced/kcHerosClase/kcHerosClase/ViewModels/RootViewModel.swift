@@ -45,8 +45,15 @@ final class RootViewModel: ObservableObject {
     var suscriptors = Set<AnyCancellable>()
     
     // Inicializador
-    init() {
+    init(testing: Bool = false) {
         self.LoggedUserControl() // Control de si el usuario está ya logueado
+        
+        // Cargamos los bootcamps si no estamos en modo testing o diseño
+        if(!testing){
+            self.loadBootcamps()
+        } else {
+            loadBootcampsTesting() // Design Mode
+        }
     }
     
     // Cierre de sesión
@@ -130,6 +137,17 @@ final class RootViewModel: ObservableObject {
             }
             .store(in: &suscriptors)
 
+    }
+    
+    // Diseño UI
+    func loadBootcampsTesting(){
+        let b1 = BootCamp(id: UUID().uuidString, name: "boot Mobile 1")
+        let b2 = BootCamp(id: UUID().uuidString, name: "boot Mobile 2")
+        let b3 = BootCamp(id: UUID().uuidString, name: "boot Mobile 3")
+        let b4 = BootCamp(id: UUID().uuidString, name: "boot Mobile 4")
+        
+        // Asignarlos al modelo
+        self.bootcamps = [b1, b2, b3, b4]
     }
     
 }
