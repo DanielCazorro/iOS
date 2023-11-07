@@ -25,8 +25,12 @@ struct HerosView: View {
                     }
                 }
             }
+            .navigationTitle("Heros")
         }
-        
+        .searchable(text: $filter, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search Hero...")
+        .onChange(of: filter) { oldValue, newValue in
+            viewModel.getHeros(filter: newValue)
+        }
     }
 }
 
