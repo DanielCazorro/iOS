@@ -32,6 +32,7 @@
 		5D529A3A2AF99510007333B6 /* HerosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A392AF99510007333B6 /* HerosModel.swift */; };
 		5D529A3C2AF99798007333B6 /* viewModelHeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A3B2AF99798007333B6 /* viewModelHeros.swift */; };
 		5DF862082AFAB91F00DB633C /* HeroesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF862072AFAB91F00DB633C /* HeroesRowView.swift */; };
+		5DF862292AFAD65A00DB633C /* HerosDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF862282AFAD65A00DB633C /* HerosDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		5D529A392AF99510007333B6 /* HerosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosModel.swift; sourceTree = "<group>"; };
 		5D529A3B2AF99798007333B6 /* viewModelHeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModelHeros.swift; sourceTree = "<group>"; };
 		5DF862072AFAB91F00DB633C /* HeroesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRowView.swift; sourceTree = "<group>"; };
+		5DF862282AFAD65A00DB633C /* HerosDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 			children = (
 				5D529A372AF994EF007333B6 /* HerosView.swift */,
 				5DF862072AFAB91F00DB633C /* HeroesRowView.swift */,
+				5DF862282AFAD65A00DB633C /* HerosDetailView.swift */,
 			);
 			path = Heros;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				5D5299E02AF9639D007333B6 /* Persistence.swift in Sources */,
 				5D529A3A2AF99510007333B6 /* HerosModel.swift in Sources */,
 				5D529A322AF9901D007333B6 /* ErrorView.swift in Sources */,
+				5DF862292AFAD65A00DB633C /* HerosDetailView.swift in Sources */,
 				5D529A2D2AF98D5B007333B6 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
