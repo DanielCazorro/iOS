@@ -14,6 +14,8 @@ final class RootViewModel: ObservableObject {
     @Published var status = Status.none // Estado
     @Published var isLogged: Bool = false // Indica si el usuario está logueado
     
+    @Published var bootcamps: [BootCamp]? // Bootcam
+    
     // Token del login
     /*
     @Published var tokenJWT: String = "" {
@@ -101,6 +103,33 @@ final class RootViewModel: ObservableObject {
             }
             .store(in: &suscriptors)
         
+    }
+    
+    func loadBootcamps(){
+        URLSession.shared
+            .dataTaskPublisher(for: BaseNetwork().getSessionBootcamps())
+            .tryMap{
+                guard let response = $0.response as? HTTPURLResponse,
+                      response.statusCode == 200 else {
+                    throw URLError(.badServerResponse)
+                }
+                
+                return $0.data
+            }
+            .decode(type: [BootCamp].self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                switch completion {
+                case .failure:
+                    self.status = .error(error: "Error buscando bootcamps")
+                case .finished:
+                    self.status = .loaded // Success
+                }
+            } receiveValue: { data in
+                self.bootcamps = data
+            }
+            .store(in: &suscriptors)
+
     }
     
 }

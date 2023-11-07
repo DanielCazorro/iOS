@@ -35,6 +35,7 @@
 		5DF862292AFAD65A00DB633C /* HerosDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF862282AFAD65A00DB633C /* HerosDetailView.swift */; };
 		5DF8622B2AFAD88000DB633C /* DeveloperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF8622A2AFAD88000DB633C /* DeveloperModel.swift */; };
 		5DF8622D2AFAD9CE00DB633C /* ViewModelDevelopers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF8622C2AFAD9CE00DB633C /* ViewModelDevelopers.swift */; };
+		5DF862302AFADC5500DB633C /* DevelopersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF8622F2AFADC5500DB633C /* DevelopersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		5DF862282AFAD65A00DB633C /* HerosDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosDetailView.swift; sourceTree = "<group>"; };
 		5DF8622A2AFAD88000DB633C /* DeveloperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperModel.swift; sourceTree = "<group>"; };
 		5DF8622C2AFAD9CE00DB633C /* ViewModelDevelopers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDevelopers.swift; sourceTree = "<group>"; };
+		5DF8622F2AFADC5500DB633C /* DevelopersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 		5D529A332AF99259007333B6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5DF8622E2AFADC4900DB633C /* Developers */,
 				5D529A362AF994DB007333B6 /* Heros */,
 				5D529A342AF9926A007333B6 /* HomeView.swift */,
 			);
@@ -271,6 +274,14 @@
 				5DF862282AFAD65A00DB633C /* HerosDetailView.swift */,
 			);
 			path = Heros;
+			sourceTree = "<group>";
+		};
+		5DF8622E2AFADC4900DB633C /* Developers */ = {
+			isa = PBXGroup;
+			children = (
+				5DF8622F2AFADC5500DB633C /* DevelopersView.swift */,
+			);
+			path = Developers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +427,7 @@
 				5D529A272AF97B44007333B6 /* StatusModel.swift in Sources */,
 				5D529A232AF96F4B007333B6 /* RootViewModel.swift in Sources */,
 				5D529A292AF97C4C007333B6 /* BaseNetwork.swift in Sources */,
+				5DF862302AFADC5500DB633C /* DevelopersView.swift in Sources */,
 				5DF862082AFAB91F00DB633C /* HeroesRowView.swift in Sources */,
 				5D529A212AF96A54007333B6 /* KeyChain.swift in Sources */,
 				5D529A382AF994EF007333B6 /* HerosView.swift in Sources */,
