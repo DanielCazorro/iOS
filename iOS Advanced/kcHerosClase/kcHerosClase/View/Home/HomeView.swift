@@ -25,6 +25,9 @@ struct HomeView: View {
                 Image(systemName: "house")
                 Text("Heros")
             }
+            
+            DevelopersView(viewModel: ViewModelDevelopers())
+            
         }
     }
 }
