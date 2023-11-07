@@ -31,6 +31,7 @@
 		5D529A382AF994EF007333B6 /* HerosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A372AF994EF007333B6 /* HerosView.swift */; };
 		5D529A3A2AF99510007333B6 /* HerosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A392AF99510007333B6 /* HerosModel.swift */; };
 		5D529A3C2AF99798007333B6 /* viewModelHeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A3B2AF99798007333B6 /* viewModelHeros.swift */; };
+		5DF862082AFAB91F00DB633C /* HeroesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF862072AFAB91F00DB633C /* HeroesRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		5D529A372AF994EF007333B6 /* HerosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosView.swift; sourceTree = "<group>"; };
 		5D529A392AF99510007333B6 /* HerosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosModel.swift; sourceTree = "<group>"; };
 		5D529A3B2AF99798007333B6 /* viewModelHeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModelHeros.swift; sourceTree = "<group>"; };
+		5DF862072AFAB91F00DB633C /* HeroesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				5D529A372AF994EF007333B6 /* HerosView.swift */,
+				5DF862072AFAB91F00DB633C /* HeroesRowView.swift */,
 			);
 			path = Heros;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				5D529A272AF97B44007333B6 /* StatusModel.swift in Sources */,
 				5D529A232AF96F4B007333B6 /* RootViewModel.swift in Sources */,
 				5D529A292AF97C4C007333B6 /* BaseNetwork.swift in Sources */,
+				5DF862082AFAB91F00DB633C /* HeroesRowView.swift in Sources */,
 				5D529A212AF96A54007333B6 /* KeyChain.swift in Sources */,
 				5D529A382AF994EF007333B6 /* HerosView.swift in Sources */,
 				5D529A302AF98F5E007333B6 /* LoaderView.swift in Sources */,
