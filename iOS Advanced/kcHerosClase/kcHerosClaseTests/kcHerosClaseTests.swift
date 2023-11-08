@@ -34,16 +34,34 @@ final class kcHerosClaseTests: XCTestCase {
     }
 
     func testUIViews() throws {
-        let view = ErrorView(error: "Hola")
+        let view = ErrorView(error: "Testing errorView")
             .environmentObject(RootViewModel(testing: true))
         XCTAssertNotNil(view)
         
         let numItems = try view.inspect().count
         XCTAssertEqual(numItems, 1)
         
+        
         // Imagen
         let img = try view.inspect().find(viewWithId: 0)
         XCTAssertNotNil(view)
+        
+        
+        //Texto
+        let text = try view.inspect().find(viewWithId: 1)
+        XCTAssertNotNil(text)
+        
+        let texto = try text.text().string()
+        XCTAssertEqual(texto, "Testing errorView")
+        
+        
+        // Botón
+        let boton = try view.inspect().find(viewWithId: 2)
+        XCTAssertNotNil(boton)
+        
+        // Ejecutar el boton TAP
+        try boton.button().tap() // Ejecuto el botón
+        
         
         
     }
