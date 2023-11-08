@@ -110,18 +110,18 @@ final class kcHerosClaseTests: XCTestCase {
             .sink { completion in
                 switch completion {
                 case .finished:
-                    XCTAssertEqual(1, 1)
-                    expectation.fulfill()
+                    // OK
+                    print("OK terminado la carga de heros")
+                    
                 case .failure:
-                    XCTAssertEqual(1, 2)
+                    XCTAssertEqual(1, 2) // Genero el fallo
+                    expectation.fulfill()
                 }
-            } receiveValue: { data in
-                XCTAssertEqual(1, 1) // Test OK
+            } receiveValue: { heros in
+                XCTAssertEqual(heros.count, 4) // Test OK
+                expectation.fulfill()
             }
             .store(in: &suscriptor)
-        
-        // Lanzamos la load
-        vm.loadBootcampsTesting()
         
         // Esperamos los X segundos
         self.waitForExpectations(timeout: 10)
