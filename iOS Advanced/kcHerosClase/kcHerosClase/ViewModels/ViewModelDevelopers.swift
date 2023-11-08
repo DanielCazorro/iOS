@@ -54,7 +54,6 @@ final class ViewModelDevelopers: ObservableObject {
     }
     
     
-    
     func getDevelopersTesting(boots:[BootCamp]){
         
         //Creo 2 bootcamps
