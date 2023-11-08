@@ -30,6 +30,13 @@ class TableViewControllerTest: UITableViewController {
         return datos.count
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 250
+        } else {
+            return 150
+        }
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -51,4 +58,8 @@ class TableViewControllerTest: UITableViewController {
 
         return cell
     }
+}
+
+#Preview {
+    TableViewControllerTest()
 }
