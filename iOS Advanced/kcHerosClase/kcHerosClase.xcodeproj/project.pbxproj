@@ -31,6 +31,7 @@
 		5D529A382AF994EF007333B6 /* HerosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A372AF994EF007333B6 /* HerosView.swift */; };
 		5D529A3A2AF99510007333B6 /* HerosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A392AF99510007333B6 /* HerosModel.swift */; };
 		5D529A3C2AF99798007333B6 /* viewModelHeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529A3B2AF99798007333B6 /* viewModelHeros.swift */; };
+		5D6B5CD12AFC0E0000638A13 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 5D6B5CD02AFC0E0000638A13 /* ViewInspector */; };
 		5DF862082AFAB91F00DB633C /* HeroesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF862072AFAB91F00DB633C /* HeroesRowView.swift */; };
 		5DF862292AFAD65A00DB633C /* HerosDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF862282AFAD65A00DB633C /* HerosDetailView.swift */; };
 		5DF8622B2AFAD88000DB633C /* DeveloperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF8622A2AFAD88000DB633C /* DeveloperModel.swift */; };
@@ -104,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D6B5CD12AFC0E0000638A13 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +323,9 @@
 				5D5299F22AF9639E007333B6 /* PBXTargetDependency */,
 			);
 			name = kcHerosClaseTests;
+			packageProductDependencies = (
+				5D6B5CD02AFC0E0000638A13 /* ViewInspector */,
+			);
 			productName = kcHerosClaseTests;
 			productReference = 5D5299F02AF9639E007333B6 /* kcHerosClaseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -378,6 +383,7 @@
 			mainGroup = 5D5299D12AF9639D007333B6;
 			packageReferences = (
 				5D529A172AF966D9007333B6 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				5D6B5CCF2AFC0E0000638A13 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			productRefGroup = 5D5299DB2AF9639D007333B6 /* Products */;
 			projectDirPath = "";
@@ -812,6 +818,14 @@
 				minimumVersion = 20.0.0;
 			};
 		};
+		5D6B5CCF2AFC0E0000638A13 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.8;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -819,6 +833,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5D529A172AF966D9007333B6 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		5D6B5CD02AFC0E0000638A13 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D6B5CCF2AFC0E0000638A13 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
 		};
 /* End XCSwiftPackageProductDependency section */
 

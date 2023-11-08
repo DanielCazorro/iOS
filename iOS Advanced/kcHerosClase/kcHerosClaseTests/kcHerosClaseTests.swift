@@ -6,6 +6,9 @@
 //
 
 import XCTest
+import SwiftUI
+import ViewInspector
+
 @testable import kcHerosClase
 
 final class kcHerosClaseTests: XCTestCase {
@@ -30,5 +33,19 @@ final class kcHerosClaseTests: XCTestCase {
         XCTAssertEqual(modelRequest.name, "Goku")
     }
 
+    func testUIViews() throws {
+        let view = ErrorView(error: "Hola")
+            .environmentObject(RootViewModel(testing: true))
+        XCTAssertNotNil(view)
+        
+        let numItems = try view.inspect().count
+        XCTAssertEqual(numItems, 1)
+        
+        // Imagen
+        let img = try view.inspect().find(viewWithId: 0)
+        XCTAssertNotNil(view)
+        
+        
+    }
 
 }
