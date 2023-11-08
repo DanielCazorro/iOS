@@ -13,8 +13,11 @@ final class viewModelHeros: ObservableObject {
     @Published var status = Status.none
     
     var suscriptors = Set<AnyCancellable>()
+    var interactor: HerosInteractorProtocol
     
-    init(testing: Bool = false){
+    init(testing: Bool = false, interactor: HerosInteractorProtocol = HerosInteractor()){
+        self.interactor = interactor
+        
         if (testing) {
             getHerosTesting()
         } else {
@@ -25,7 +28,7 @@ final class viewModelHeros: ObservableObject {
     
     func getHeros(filter: String) {
         self.status = .loading
-        
+/*
         URLSession.shared
             .dataTaskPublisher(for: BaseNetwork().getSessionHero(filter: filter))
             .tryMap{
@@ -38,6 +41,8 @@ final class viewModelHeros: ObservableObject {
             }
             .decode(type: [Heros].self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
+ */
+        interactor.getHeros(filter: filter) // New with interactor
             .sink { completion in
                 switch completion {
                 case .failure:

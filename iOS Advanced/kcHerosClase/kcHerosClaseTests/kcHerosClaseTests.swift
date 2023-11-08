@@ -96,5 +96,36 @@ final class kcHerosClaseTests: XCTestCase {
         // Esperamos los X segundos
         self.waitForExpectations(timeout: 10)
     }
+    
+    func testViewModelHeros() throws {
+        let expectation = self.expectation(description: "Descarga de bootcamps")
+        var suscriptor = Set<AnyCancellable>()
+        
+        // Instancio el ViewModel
+        let vm = viewModelHeros(interactor: HerosInteractorFake())
+        XCTAssertNotNil(vm)
+        
+        // Creo el observador
+        vm.heros.publisher
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    XCTAssertEqual(1, 1)
+                    expectation.fulfill()
+                case .failure:
+                    XCTAssertEqual(1, 2)
+                }
+            } receiveValue: { data in
+                XCTAssertEqual(1, 1) // Test OK
+            }
+            .store(in: &suscriptor)
+        
+        // Lanzamos la load
+        vm.loadBootcampsTesting()
+        
+        // Esperamos los X segundos
+        self.waitForExpectations(timeout: 10)
+    }
+
 
 }
