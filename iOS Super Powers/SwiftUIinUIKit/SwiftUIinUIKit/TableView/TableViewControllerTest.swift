@@ -39,11 +39,14 @@ class TableViewControllerTest: UITableViewController {
         
         cell.contentConfiguration = UIHostingConfiguration{
             // Aquí el SwiftUI
+            /*
             VStack{
                 Text("Item \(item)")
             }
             .font(.title)
             .background(.blue)
+             */
+            CellRowView(numero: item)
         }
 
         return cell

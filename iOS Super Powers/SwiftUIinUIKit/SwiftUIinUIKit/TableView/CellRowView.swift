@@ -12,11 +12,26 @@ struct CellRowView: View {
     
     var body: some View {
         VStack{
-            Image(systemName: <#T##String#>)
+            Image(systemName: "number.circle.fill")
+                .resizable()
+                .frame(width: 50, height: 50)
+                .foregroundStyle(.blue)
+                .padding()
+            HStack{
+                Spacer()
+                Text("Número \(numero)")
+                    .font(.title)
+                Spacer()
+            }
         }
+        .background(.orange)
     }
 }
 
-#Preview {
-    CellRowView(numero: 1)
+struct CellRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        CellRowView(numero: 2)
+            .previewLayout(.fixed(width: 400.0, height: 200.0))
+            
+    }
 }
