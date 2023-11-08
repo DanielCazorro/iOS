@@ -23,6 +23,8 @@ class ViewController: UIViewController {
 
     @IBAction func openTableViewController(_ sender: Any) {
         
+        let vc = TableViewControllerTest()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

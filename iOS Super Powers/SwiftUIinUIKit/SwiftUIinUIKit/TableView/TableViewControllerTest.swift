@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class TableViewControllerTestTableViewController: UITableViewController {
+class TableViewControllerTest: UITableViewController {
 
     private let datos = [1,2,3,4,5,6,7,8,9,10]
     
