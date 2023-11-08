@@ -11,6 +11,7 @@ struct CellRowView: View {
     var numero: Int // El modelo
     
     var body: some View {
+        Spacer()
         VStack{
             Image(systemName: "number.circle.fill")
                 .resizable()
@@ -23,6 +24,7 @@ struct CellRowView: View {
                     .font(.title)
                 Spacer()
             }
+            Spacer()
         }
         .background(.orange)
     }
