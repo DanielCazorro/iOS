@@ -32,27 +32,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAQ-gF-wYM">
-                                <rect key="frame" x="88" y="409" width="217" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Abrir TableViewController"/>
-                                <connections>
-                                    <action selector="openTableViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N2h-lD-wqp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXr-D9-Qty">
-                                <rect key="frame" x="113" y="250" width="184" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Abrir vista de SwiftUI"/>
-                                <connections>
-                                    <action selector="openSwiftUIView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oze-NU-KY6"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6c6-MR-1v8">
+                                <rect key="frame" x="88" y="381.66666666666669" width="217" height="88.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXr-D9-Qty">
+                                        <rect key="frame" x="0.0" y="0.0" width="217" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Abrir vista de SwiftUI"/>
+                                        <connections>
+                                            <action selector="openSwiftUIView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oze-NU-KY6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAQ-gF-wYM">
+                                        <rect key="frame" x="0.0" y="54.333333333333314" width="217" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Abrir TableViewController"/>
+                                        <connections>
+                                            <action selector="openTableViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N2h-lD-wqp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6c6-MR-1v8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HJ6-Pc-VpJ"/>
+                            <constraint firstItem="6c6-MR-1v8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="n0b-wW-L3d"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qLV-R2-rvi"/>
                 </viewController>

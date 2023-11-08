@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
 
@@ -14,10 +15,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func openSwiftUIView(_ sender: Any) {
+        // Abrimos vista de SwiftUI
+        let view = UIHostingController(rootView: SwiftUITestView())
+        self.navigationController?.pushViewController(view, animated: true)
     }
     
 
     @IBAction func openTableViewController(_ sender: Any) {
+        
     }
 }
 
