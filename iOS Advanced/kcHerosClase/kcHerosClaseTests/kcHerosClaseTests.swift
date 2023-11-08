@@ -7,6 +7,7 @@
 
 import XCTest
 import SwiftUI
+import Combine
 import ViewInspector
 
 @testable import kcHerosClase
@@ -64,6 +65,36 @@ final class kcHerosClaseTests: XCTestCase {
         
         
         
+    }
+    
+    func testViewModelBootCamps() throws {
+        let expectation = self.expectation(description: "Descarga de bootcamps")
+        var suscriptor = Set<AnyCancellable>()
+        
+        // Instancio el ViewModel
+        let vm = RootViewModel(testing: true)
+        XCTAssertNotNil(vm)
+        
+        // Creo el observador
+        vm.bootcamps.publisher
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    XCTAssertEqual(1, 1)
+                    expectation.fulfill()
+                case .failure:
+                    XCTAssertEqual(1, 2)
+                }
+            } receiveValue: { data in
+                XCTAssertEqual(1, 1) // Test OK
+            }
+            .store(in: &suscriptor)
+        
+        // Lanzamos la load
+        vm.loadBootcampsTesting()
+        
+        // Esperamos los X segundos
+        self.waitForExpectations(timeout: 10)
     }
 
 }
