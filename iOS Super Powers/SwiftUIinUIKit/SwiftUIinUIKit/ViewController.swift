@@ -13,7 +13,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    @IBAction func openSwiftUIView(_ sender: Any) {
+    }
+    
 
-
+    @IBAction func openTableViewController(_ sender: Any) {
+    }
 }
 
