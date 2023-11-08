@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class TableViewControllerTestTableViewController: UITableViewController {
 
@@ -14,6 +15,9 @@ class TableViewControllerTestTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Registrar las celdas ... SIEMPRE
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
     }
 
     // MARK: - Table view data source
@@ -30,7 +34,17 @@ class TableViewControllerTestTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        // Configure the cell...
+        // Extraer el modelo
+        let item = datos[indexPath.row]
+        
+        cell.contentConfiguration = UIHostingConfiguration{
+            // Aquí el SwiftUI
+            VStack{
+                Text("Item \(item)")
+            }
+            .font(.title)
+            .background(.blue)
+        }
 
         return cell
     }
