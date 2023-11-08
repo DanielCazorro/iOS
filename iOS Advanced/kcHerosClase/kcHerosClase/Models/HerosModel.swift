@@ -14,6 +14,12 @@ struct Heros: Codable, Identifiable {
     var description: String
     var photo: String // Es una URL
     var favorite: Bool? // El usuario conectado marca como favorito un heroe
+    
+    
+    func getFullName() -> String {
+        return "\(name)"
+    }
+    
 }
 
 // Para la request, necesito enviar el nombre del heroe
