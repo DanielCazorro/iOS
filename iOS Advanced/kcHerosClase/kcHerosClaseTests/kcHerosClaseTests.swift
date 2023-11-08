@@ -23,7 +23,11 @@ final class kcHerosClaseTests: XCTestCase {
         let model = Heros(id: UUID(), name: "Jose", description: "", photo: "", favorite: true)
         XCTAssertNotNil(model)
         XCTAssertEqual(model.name, "Jose")
+        XCTAssertEqual(model.getFullName(), "Jose")
         
+        let modelRequest = HerosFilter(name: "Goku")
+        XCTAssertNotNil(modelRequest)
+        XCTAssertEqual(modelRequest.name, "Goku")
     }
 
 
