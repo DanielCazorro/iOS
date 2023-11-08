@@ -14,6 +14,7 @@
 		5D7E57B52AFC1B2600F65090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D7E57B42AFC1B2600F65090 /* Assets.xcassets */; };
 		5D7E57B82AFC1B2600F65090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D7E57B62AFC1B2600F65090 /* LaunchScreen.storyboard */; };
 		5D7E57C22AFC1C1A00F65090 /* SwiftUITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E57C12AFC1C1A00F65090 /* SwiftUITestView.swift */; };
+		5D7E57C42AFC1D7200F65090 /* TableViewControllerTestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E57C32AFC1D7200F65090 /* TableViewControllerTestTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5D7E57B72AFC1B2600F65090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D7E57B92AFC1B2600F65090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D7E57C12AFC1C1A00F65090 /* SwiftUITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITestView.swift; sourceTree = "<group>"; };
+		5D7E57C32AFC1D7200F65090 /* TableViewControllerTestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerTestTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		5D7E57BF2AFC1BE700F65090 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				5D7E57C32AFC1D7200F65090 /* TableViewControllerTestTableViewController.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D7E57C42AFC1D7200F65090 /* TableViewControllerTestTableViewController.swift in Sources */,
 				5D7E57B02AFC1B2500F65090 /* ViewController.swift in Sources */,
 				5D7E57AC2AFC1B2500F65090 /* AppDelegate.swift in Sources */,
 				5D7E57C22AFC1C1A00F65090 /* SwiftUITestView.swift in Sources */,
