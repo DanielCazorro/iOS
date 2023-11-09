@@ -34,6 +34,6 @@ struct CellRowView_Previews: PreviewProvider {
     static var previews: some View {
         CellRowView(numero: 2)
             .previewLayout(.fixed(width: 400.0, height: 200.0))
-            
+        
     }
 }
