@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(view, animated: true)
     }
     
-
+    
     @IBAction func openTableViewController(_ sender: Any) {
         
         let vc = TableViewControllerTest()
