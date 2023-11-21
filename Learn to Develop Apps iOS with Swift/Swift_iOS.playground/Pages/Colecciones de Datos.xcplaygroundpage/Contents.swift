@@ -75,3 +75,33 @@ lettersDictionary.keys
 
 // Accedemos a todos los valores del diccionario
 lettersDictionary.values
+
+
+// MARK: Set
+
+// Declarando nuestra colección de datos del tipo Set, que contiene elementos del tipo String. Además lo inicializamos vacío
+var lettersSet: Set<String> = []
+
+lettersSet.count
+
+// Insertamos un elemento en nuestro Set
+lettersSet.insert("Carta a Mónica")
+lettersSet.count
+lettersSet.isEmpty
+
+// Comprobamos si el Set contiene el elemento
+lettersSet.contains("Carta a Mónica")
+lettersSet.contains("Curso Swift")
+
+// Eliminamos el elemento del Set
+lettersSet.remove("Carta a Mónica")
+lettersSet.count
+
+lettersSet = ["Carta a Rachel",
+              "Carta a Ross"]
+lettersSet.count
+
+// No podemos añadir elementos duplicados a un Set
+lettersSet.insert("Carta a Rachel")
+lettersSet.count
+
