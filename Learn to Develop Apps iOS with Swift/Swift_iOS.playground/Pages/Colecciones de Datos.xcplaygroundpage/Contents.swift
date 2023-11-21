@@ -2,6 +2,8 @@ import UIKit
 
 /** 3. Colecciones de datos **/
 
+// MARK: Arrays
+
 var letters: [String] = []
 
 // Nos muestra el número de Strings que tiene mi array
@@ -38,3 +40,38 @@ lettersPrice.append(0.10)
 // Podemos añadir un conjunto de elementos
 lettersPrice.append(contentsOf: [100.9,90.9,80.9])
 lettersPrice.sort()
+
+
+// MARK: Dictionary
+
+// Declarando un diccionario [key:value] y lo inicializamos a un diccionario vacío
+var lettersDictionary: [Int:String] = [:]
+
+lettersDictionary.count
+
+let keyDictionary = 1
+lettersDictionary[keyDictionary] = "Carta a Mónica"
+lettersDictionary.count
+
+lettersDictionary.isEmpty
+lettersDictionary[keyDictionary]
+
+// Intentamos obtener el valor de una clave inexistente, y nos da nil
+lettersDictionary[10]
+
+// Eliminamos el valor asociado a la clave escrita en forkey
+lettersDictionary.removeValue(forKey: keyDictionary)
+lettersDictionary[keyDictionary]
+lettersDictionary.count
+
+lettersDictionary = [1: "Carta a Rachel",
+                     9: "Carta a Ross"]
+lettersDictionary.count
+lettersDictionary[5] = "Carta a Mónica"
+lettersDictionary.count
+
+// Devuelve todas las claves del diccionario
+lettersDictionary.keys
+
+// Accedemos a todos los valores del diccionario
+lettersDictionary.values
