@@ -21,7 +21,6 @@ enum LetterType: CaseIterable {
     case business
     case family
     case friends
-    
 }
 
 var letterType: LetterType = .family
@@ -29,3 +28,27 @@ letterType = .love
 
 LetterType.allCases
 
+
+enum Mailboxroperties {
+    case capacity(Int)
+    case adress(String)
+}
+
+var mailboxProperty = Mailboxroperties.capacity(100)
+mailboxProperty = Mailboxroperties.adress("Puerta del Sol, Madrid")
+
+
+enum LetterSizes: Int {
+    case small = 10
+    case medium
+    case big
+}
+
+var letterSize = LetterSizes(rawValue: 25)
+var letterSizeMedium = LetterSizes(rawValue: 11)
+
+
+enum LetterNames: String {
+    case initial = "Hello"
+    case close = "Goodbye"
+}
