@@ -12,3 +12,17 @@ mailbox.1
 let mailboxAlias: (name:String, number: Int) = ("Keepcoding", 10)
 mailboxAlias.name
 mailboxAlias.number
+
+
+// MARK: Enum
+
+enum LetterType {
+    case love
+    case business
+    case family
+    case friends
+    
+}
+
+var letterType: LetterType = .family
+letterType = .love
