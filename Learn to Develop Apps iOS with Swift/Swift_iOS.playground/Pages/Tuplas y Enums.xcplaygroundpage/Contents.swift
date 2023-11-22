@@ -16,7 +16,7 @@ mailboxAlias.number
 
 // MARK: Enum
 
-enum LetterType {
+enum LetterType: CaseIterable {
     case love
     case business
     case family
@@ -26,3 +26,6 @@ enum LetterType {
 
 var letterType: LetterType = .family
 letterType = .love
+
+LetterType.allCases
+
