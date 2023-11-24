@@ -37,6 +37,15 @@ case 1...5: print("Hay pocos cartero")
 default: print("Hay muchos carteros")
 }
 
+// Este if sería la versión con if del switch superior
+if(postmansCount == 0) {
+    print("No hay carteros")
+} else if(postmansCount >= 1 && postmansCount <= 5) {
+    print("Hay un cartero")
+} else {
+    print("Hay muchos carteros")
+}
+
 enum Mailboxroperties {
     case capacity(Int)
     case adress(String)
