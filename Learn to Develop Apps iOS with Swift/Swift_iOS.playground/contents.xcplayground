@@ -4,5 +4,6 @@
         <page name='Variable'/>
         <page name='Colecciones de Datos'/>
         <page name='Tuplas y Enums'/>
+        <page name='Sentencias de Control'/>
     </pages>
 </playground>
