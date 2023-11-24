@@ -2,6 +2,7 @@ import Foundation
 
 /** Sentencias de Control **/
 
+// MARK: If
 
 let lettersCount = 20
 
@@ -22,4 +23,28 @@ if(lettersCount2 >= 5 && lettersCount2 < 20) {
     print("Tienes algunas cartas en el buzón")
 } else {
     print("No tienes cartas en el buzón")
+}
+
+
+// MARK: Switch
+
+
+let postmansCount = 3
+
+switch(postmansCount) {
+case 0: print("No hay carteros")
+case 1...5: print("Hay pocos cartero")
+default: print("Hay muchos carteros")
+}
+
+enum Mailboxroperties {
+    case capacity(Int)
+    case adress(String)
+}
+
+let mailboxType = Mailboxroperties.adress("Puerta del Sol, Madrid")
+
+switch(mailboxType) {
+case .capacity(let count): print("La capacidad es \(count)")
+case .adress(let address): print("La dirección es \(address)")
 }
